@@ -14,7 +14,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/logowanie"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +22,7 @@
         android:id="@+id/editTextEmail"
         android:layout_width="800px"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="12dp"
@@ -35,21 +34,21 @@
         app:layout_constraintEnd_toEndOf="@+id/buttonRejestracja"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@+id/buttonLogowanie"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogowanie" />
 
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="800px"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="12dp"
         android:hint="Haslo"
-        android:paddingStart="15dp"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="5dp"
+        android:paddingStart="15dp"
         android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
         app:layout_constraintHorizontal_bias="0.0"
@@ -62,13 +61,10 @@
         android:layout_height="55dp"
         android:layout_below="@+id/editTextPassword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:text="Zaloguj"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
@@ -76,11 +72,10 @@
         android:id="@+id/buttonLogowanie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="Logowanie"
-        android:textSize="50px"
         android:background="@drawable/custom_button"
+        android:text="Logowanie"
         android:textColor="@color/black"
+        android:textSize="50px"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
         app:layout_constraintEnd_toStartOf="@+id/buttonRejestracja"
         app:layout_constraintHorizontal_bias="0.5"
@@ -92,13 +87,11 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
         android:text="Rejestracja"
         android:textColor="@color/black"
         android:textSize="50px"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonLogowanie"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="@+id/buttonLogowanie" />
 </androidx.constraintlayout.widget.ConstraintLayout>
