@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">FuturePlan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="profile">Profil</string>
+    <string name="terminarz">Terminarz</string>
+    <string name="pomoce">Pomoce naukowe</string>
+    <string name="plan">Plan lekcji</string>
+    <string name="fiszki">Fiszki</string>
+    <string name="notatki">Notatki</string>
+    <string name="settings">Ustawienia</string>
+    <string name="oaplikacji">O aplikacji</string>
+
+    <string name="name">Julia Podolak</string>
+    <string name="email">julia.podolak123@gmail.com</string>
+
+    <string name="organizacja">Organizacja</string>
+    <string name="nauka">Nauka</string>
+    <string name="inne">Inne</string>
 </resources>

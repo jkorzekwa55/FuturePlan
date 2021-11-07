@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/organizacja">
+        <menu>
+            <item
+                android:id="@+id/menuTerminarz"
+                android:icon="@drawable/terminarz"
+                android:title="@string/terminarz"/>
+
+            <item
+                android:id="@+id/menuPlanLekcji"
+                android:icon="@drawable/plan"
+                android:title="@string/plan"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/nauka">
+        <menu>
+            <item
+                android:id="@+id/menuPomoceNaukowe"
+                android:icon="@drawable/pomoce"
+                android:title="@string/pomoce"/>
+
+            <item
+                android:id="@+id/menuFiszki"
+                android:icon="@drawable/fiszki"
+                android:title="@string/fiszki"/>
+
+            <item
+                android:id="@+id/menuNotatki"
+                android:icon="@drawable/notatki"
+                android:title="@string/notatki"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/inne">
+        <menu>
+            <item
+                android:id="@+id/menuProfile"
+                android:icon="@drawable/profil"
+                android:title="@string/profile"/>
+            <item
+                android:id="@+id/menuUstawienia"
+                android:icon="@drawable/ustawienia"
+                android:title="@string/settings"/>
+
+            <item
+                android:id="@+id/menuoAplikacji"
+                android:icon="@drawable/oaplikacji"
+                android:title="@string/oaplikacji"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_1"
+    app:startDestination="@id/menuProfile">
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.example.futureplan.Profil"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuTerminarz"
+        android:name="com.example.futureplan.Terminarz"
+        android:label="fragment_terminarz"
+        tools:layout="@layout/fragment_terminarz" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuPlanLekcji"
+        android:name="com.example.futureplan.PlanLekcji"
+        android:label="fragment_plan_lekcji"
+        tools:layout="@layout/fragment_plan_lekcji" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuPomoceNaukowe"
+        android:name="com.example.futureplan.PomoceNaukowe"
+        android:label="fragment_pomoce_naukowe"
+        tools:layout="@layout/fragment_pomoce_naukowe" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuFiszki"
+        android:name="com.example.futureplan.Fiszki"
+        android:label="fragment_fiszki"
+        tools:layout="@layout/fragment_fiszki" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuNotatki"
+        android:name="com.example.futureplan.Notatki"
+        android:label="fragment_notatki"
+        tools:layout="@layout/fragment_notatki" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuUstawienia"
+        android:name="com.example.futureplan.Ustawienia"
+        android:label="fragment_ustawienia"
+        tools:layout="@layout/fragment_ustawienia" >
+    </fragment>
+    <fragment
+        android:id="@+id/menuoAplikacji"
+        android:name="com.example.futureplan.oAplikacji"
+        android:label="fragment_o_aplikacji"
+        tools:layout="@layout/fragment_o_aplikacji" >
+    </fragment>
+</navigation>
