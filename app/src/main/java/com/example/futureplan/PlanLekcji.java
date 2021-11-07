@@ -2,8 +2,6 @@ package com.example.futureplan;
 
 import android.os.Bundle;
 
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomePage#newInstance} factory method to
+ * Use the {@link PlanLekcji#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomePage extends Fragment {
+public class PlanLekcji extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +24,7 @@ public class HomePage extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomePage() {
+    public PlanLekcji() {
         // Required empty public constructor
     }
 
@@ -36,11 +34,11 @@ public class HomePage extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomePage.
+     * @return A new instance of fragment PlanLekcji.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomePage newInstance(String param1, String param2) {
-        HomePage fragment = new HomePage();
+    public static PlanLekcji newInstance(String param1, String param2) {
+        PlanLekcji fragment = new PlanLekcji();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,17 +59,6 @@ public class HomePage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home_page, container, false);
-
-        DrawerLayout drawerLayout = view.findViewById(R.id.drawerLayout);
-        view.findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
-
-
-        return view;
+        return inflater.inflate(R.layout.fragment_plan_lekcji, container, false);
     }
 }
