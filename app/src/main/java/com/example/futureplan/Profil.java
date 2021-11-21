@@ -1,20 +1,33 @@
 package com.example.futureplan;
 
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.GridView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Profil#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+
+
 public class Profil extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -29,7 +42,6 @@ public class Profil extends Fragment {
     public Profil() {
         // Required empty public constructor
     }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -61,7 +73,73 @@ public class Profil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false);
+        View view = inflater.inflate(R.layout.fragment_profil, container, false);
 
+        EditText PeditTextEmail = view.findViewById(R.id.PeditTextEmail);
+        String email = PreferenceUtils.getEmail(getContext());
+        PeditTextEmail.setText(email);
+
+        EditText PeditTextN = view.findViewById(R.id.PeditTextN);
+        String name = PreferenceUtils.getName(getContext());
+        PeditTextN.setText(name);
+
+        EditText PeditTextName = view.findViewById(R.id.PeditTextName);
+        EditText PeditTextSName = view.findViewById(R.id.PeditTextSName);
+        EditText PeditTextNumber = view.findViewById(R.id.PeditTextNumber);
+        EditText PeditTextDate = view.findViewById(R.id.PeditTextDate);
+
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(getContext());
+
+        Button btnLogout = view.findViewById(R.id.btnLogout);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PreferenceUtils.saveEmail("", getContext());
+                PreferenceUtils.saveName("", getContext());
+                startActivity(new Intent(getContext(), LogActivity.class));
+            }
+        });
+
+        Button btnSave = view.findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                UserModel userModel;
+                userModel = new UserModel(-1, PeditTextName.getText().toString(), PeditTextSName.getText().toString(), PeditTextN.getText().toString(),  PeditTextEmail.getText().toString(), "", PeditTextNumber.getText().toString(), PeditTextDate.getText().toString() );
+                String em = PreferenceUtils.getEmail(getContext());
+                dataBaseHelper.updateData(userModel, em);
+            }
+        });
+
+
+        FloatingActionButton btnImage = view.findViewById(R.id.btnImage);
+        btnImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertDialog();
+            }
+
+            void showAlertDialog() {
+                GridView gridView = new GridView(getActivity());
+
+                gridView.setAdapter(new ImageAdapter(view.getContext()));
+                gridView.setNumColumns(3);
+                gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        // do something here
+                    }
+                });
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setView(gridView);
+                builder.setTitle("Wybierz zdjecie profilowe:");
+                builder.show();
+            }
+        });
+
+
+        return view;
     }
+
 }

@@ -17,8 +17,8 @@ public class LogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
-
         buttonRejestracja = findViewById(R.id.buttonRejestracja);
+
         buttonRejestracja.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +42,10 @@ public class LogActivity extends AppCompatActivity {
                 boolean checkPassword = dataBaseHelper.checkpassword(email,pass);
 
                 if(checkEmail && checkPassword){
+                    PreferenceUtils.saveEmail(email,LogActivity.this);
                     Toast.makeText(LogActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                    finish();
+
                 }else{
                     Toast.makeText(LogActivity.this, "Not valid user or password", Toast.LENGTH_SHORT).show();
                 }
