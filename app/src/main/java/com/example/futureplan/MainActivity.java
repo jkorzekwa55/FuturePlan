@@ -15,8 +15,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import android.util.Log;
@@ -27,12 +29,16 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+    private FloatingActionButton btnImage;
+    private EditText PeditTextName, PeditTextSName, PeditTextEmail, PeditTextNumber, PeditTextDate;
+    private Button btnLogout, btnSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        startActivity(new Intent(MainActivity.this, LogActivity.class));
+        if(PreferenceUtils.getEmail(this) == null || PreferenceUtils.getEmail(this).equals("")){
+            startActivity(new Intent(MainActivity.this, LogActivity.class));
+        }
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
 
         findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener(){
@@ -41,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-
         NavigationView navigationView = findViewById(R.id.navigationView);
         navigationView.setItemIconTintList(null);
 

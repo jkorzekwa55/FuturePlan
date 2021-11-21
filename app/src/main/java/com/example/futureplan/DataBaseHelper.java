@@ -11,18 +11,22 @@ import androidx.annotation.Nullable;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static final String TABLE_NAME = "USER_TABLE";
+    public static final String COLUMN_USER_FIRST_NAME = "USER_FIRST_NAME";
+    public static final String COLUMN_USER_SECOND_NAME = "USER_SECOND_NAME";
     public static final String COLUMN_USER_NAME = "USER_NAME";
     public static final String COLUMN_USER_EMAIL = "USER_EMAIL";
     public static final String COLUMN_USER_PASSWORD = "USER_PASSWORD";
+    public static final String COLUMN_USER_NUMBER = "USER_NUMBER";
+    public static final String COLUMN_USER_DATE = "USER_DATE";
     public static final String COLUMN_ID = "ID";
 
     public DataBaseHelper(@Nullable Context context) {
-        super(context, "users.db", null, 1);
+            super(context, "users.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + TABLE_NAME + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT)";
+        String createTableStatement = "CREATE TABLE " + TABLE_NAME + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_FIRST_NAME + " TEXT, " + COLUMN_USER_SECOND_NAME + " TEXT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, "  + COLUMN_USER_PASSWORD + " TEXT, "  + COLUMN_USER_NUMBER + " TEXT, "  + COLUMN_USER_DATE + " TEXT)";
 
         db.execSQL(createTableStatement);
     }
@@ -37,11 +41,34 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public boolean insertData(UserModel userModel){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_USER_FIRST_NAME, userModel.getFirstName());
+        contentValues.put(COLUMN_USER_SECOND_NAME, userModel.getSecondName());
         contentValues.put(COLUMN_USER_NAME, userModel.getName());
         contentValues.put(COLUMN_USER_EMAIL, userModel.getEmail());
         contentValues.put(COLUMN_USER_PASSWORD, userModel.getPassword());
+        contentValues.put(COLUMN_USER_NUMBER, userModel.getNumber());
+        contentValues.put(COLUMN_USER_DATE, userModel.getDate());
 
         long insert = db.insert(TABLE_NAME, null, contentValues);
+        if(insert == -1){
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
+    public boolean updateData(UserModel userModel, String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_USER_FIRST_NAME, userModel.getFirstName());
+        contentValues.put(COLUMN_USER_SECOND_NAME, userModel.getSecondName());
+        contentValues.put(COLUMN_USER_NAME, userModel.getName());
+        contentValues.put(COLUMN_USER_EMAIL, userModel.getEmail());
+        contentValues.put(COLUMN_USER_NUMBER, userModel.getNumber());
+        contentValues.put(COLUMN_USER_DATE, userModel.getDate());
+
+        long insert = db.update(TABLE_NAME, contentValues,COLUMN_USER_EMAIL + " = ?", new String[] {email});
         if(insert == -1){
             return false;
         }else{
