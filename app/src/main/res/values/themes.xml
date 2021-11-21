@@ -15,6 +15,7 @@
         <!-- Customize your theme here. -->
     </style>
 
+
     <style name="Theme.FuturePlan.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -23,4 +24,10 @@
     <style name="Theme.FuturePlan.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.FuturePlan.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
 </resources>

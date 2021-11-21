@@ -35,6 +35,7 @@ public class RegActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = editTextEmail.getText().toString();
+                String name = editTextName.getText().toString();
                 String pass = editTextPassword.getText().toString();
                 String repass = editTextRepassword.getText().toString();
                 UserModel userModel;
@@ -51,8 +52,11 @@ public class RegActivity extends AppCompatActivity {
                                 Toast.makeText(RegActivity.this, "Error creating customer", Toast.LENGTH_SHORT).show();
                                 userModel = new UserModel(-1, "error", "error", "error");
                             }
+                            PreferenceUtils.saveName(name,RegActivity.this);
+                            PreferenceUtils.saveEmail(email,RegActivity.this);
                             boolean success = dataBaseHelper.insertData(userModel);
                             Toast.makeText(RegActivity.this, "Success= " + success, Toast.LENGTH_SHORT).show();
+                            finish();
                         }else{
                             Toast.makeText(RegActivity.this, "User already exists", Toast.LENGTH_SHORT).show();
                         }

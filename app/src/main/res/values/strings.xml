@@ -17,4 +17,14 @@
     <string name="organizacja">Organizacja</string>
     <string name="nauka">Nauka</string>
     <string name="inne">Inne</string>
+
+    <string name="log">logowanie</string>
+    <string name="rej">rejestracja</string>
+
+    <string name="imie">Imie</string>
+    <string name="nazwaUzyt">Nazwa uzytkownika</string>
+    <string name="nazwisko">Nazwisko</string>
+    <string name="haslo">Haslo</string>
+    <string name="Email">Email</string>
+    <string name="powHaslo">Powtorz haslo</string>
 </resources>
