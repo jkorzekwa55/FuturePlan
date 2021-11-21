@@ -38,7 +38,7 @@
         <menu>
             <item
                 android:id="@+id/menuProfile"
-                android:icon="@drawable/profil"
+                android:icon="@drawable/profile_icon2"
                 android:title="@string/profile"/>
             <item
                 android:id="@+id/menuUstawienia"

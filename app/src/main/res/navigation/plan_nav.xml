@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/plan_nav"
+    app:startDestination="@id/monday">
+
+    <fragment
+        android:id="@+id/monday"
+        android:name="com.example.futureplan.Monday"
+        android:label="fragment_monday"
+        tools:layout="@layout/fragment_monday" >
+        <action
+            android:id="@+id/action_monday_to_tuesday"
+            app:destination="@id/tuesday" />
+        <action
+            android:id="@+id/action_monday_to_sunday"
+            app:destination="@id/sunday" />
+        <action
+            android:id="@+id/action_monday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tuesday"
+        android:name="com.example.futureplan.Tuesday"
+        android:label="fragment_tuesday"
+        tools:layout="@layout/fragment_tuesday" >
+        <action
+            android:id="@+id/action_tuesday_to_wednesday"
+            app:destination="@id/wednesday" />
+        <action
+            android:id="@+id/action_tuesday_to_monday"
+            app:destination="@id/monday" />
+        <action
+            android:id="@+id/action_tuesday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/wednesday"
+        android:name="com.example.futureplan.Wednesday"
+        android:label="fragment_wednesday"
+        tools:layout="@layout/fragment_wednesday" >
+        <action
+            android:id="@+id/action_wednesday_to_thursday"
+            app:destination="@id/thursday" />
+        <action
+            android:id="@+id/action_wednesday_to_tuesday"
+            app:destination="@id/tuesday" />
+        <action
+            android:id="@+id/action_wednesday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/thursday"
+        android:name="com.example.futureplan.Thursday"
+        android:label="fragment_thursday"
+        tools:layout="@layout/fragment_thursday" >
+        <action
+            android:id="@+id/action_thursday_to_friday"
+            app:destination="@id/friday" />
+        <action
+            android:id="@+id/action_thursday_to_wednesday"
+            app:destination="@id/wednesday" />
+        <action
+            android:id="@+id/action_thursday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/friday"
+        android:name="com.example.futureplan.Friday"
+        android:label="fragment_friday"
+        tools:layout="@layout/fragment_friday" >
+        <action
+            android:id="@+id/action_friday_to_saturday"
+            app:destination="@id/saturday" />
+        <action
+            android:id="@+id/action_friday_to_thursday"
+            app:destination="@id/thursday" />
+        <action
+            android:id="@+id/action_friday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/saturday"
+        android:name="com.example.futureplan.Saturday"
+        android:label="fragment_saturday"
+        tools:layout="@layout/fragment_saturday" >
+        <action
+            android:id="@+id/action_saturday_to_sunday"
+            app:destination="@id/sunday" />
+        <action
+            android:id="@+id/action_saturday_to_friday"
+            app:destination="@id/friday" />
+        <action
+            android:id="@+id/action_saturday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sunday"
+        android:name="com.example.futureplan.Sunday"
+        android:label="fragment_sunday"
+        tools:layout="@layout/fragment_sunday" >
+        <action
+            android:id="@+id/action_sunday_to_monday"
+            app:destination="@id/monday" />
+        <action
+            android:id="@+id/action_sunday_to_saturday"
+            app:destination="@id/saturday" />
+        <action
+            android:id="@+id/action_sunday_to_editPlan2"
+            app:destination="@id/editPlan2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPlan2"
+        android:name="com.example.futureplan.EditPlan"
+        android:label="fragment_edit_plan"
+        tools:layout="@layout/fragment_edit_plan" >
+        <action
+            android:id="@+id/action_editPlan2_to_monday"
+            app:destination="@id/monday" />
+        <action
+            android:id="@+id/action_editPlan2_to_tuesday"
+            app:destination="@id/tuesday" />
+        <action
+            android:id="@+id/action_editPlan2_to_wednesday"
+            app:destination="@id/wednesday" />
+        <action
+            android:id="@+id/action_editPlan2_to_thursday"
+            app:destination="@id/thursday" />
+        <action
+            android:id="@+id/action_editPlan2_to_friday"
+            app:destination="@id/friday" />
+        <action
+            android:id="@+id/action_editPlan2_to_saturday"
+            app:destination="@id/saturday" />
+        <action
+            android:id="@+id/action_editPlan2_to_sunday"
+            app:destination="@id/sunday" />
+    </fragment>
+</navigation>
