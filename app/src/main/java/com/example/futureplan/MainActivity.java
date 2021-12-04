@@ -29,9 +29,6 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
-    private FloatingActionButton btnImage;
-    private EditText PeditTextName, PeditTextSName, PeditTextEmail, PeditTextNumber, PeditTextDate;
-    private Button btnLogout, btnSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

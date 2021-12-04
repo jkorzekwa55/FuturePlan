@@ -3,55 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/drawable/ic_menu.xml" value="0.3015625" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/activity_log.xml" value="0.3292572463768116" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/activity_reg.xml" value="0.3292572463768116" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/drawer_header.xml" value="0.3432971014492754" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_drawer.xml" value="0.25" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_edit_plan.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_fiszki.xml" value="0.20520833333333333" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_friday.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_home_page.xml" value="0.33" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_monday.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_notatki.xml" value="0.34782608695652173" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_o_aplikacji.xml" value="0.34782608695652173" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji.xml" value="0.22" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page1.xml" value="0.33" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page2.xml" value="0.3292572463768116" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page3.xml" value="0.3292572463768116" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_pomoce_naukowe.xml" value="0.33" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_profil.xml" value="0.22" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_saturday.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_sunday.xml" value="0.33" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_terminarz.xml" value="0.22" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_thursday.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_tuesday.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_ustawienia.xml" value="0.34782608695652173" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_wednesday.xml" value="0.36666666666666664" />
-        <entry key="..\:/SCI/-=KLASA3=-/Projekt Praktyka Zawodowa/FuturePlan/FuturePlan/app/src/main/res/menu/navigation_menu.xml" value="0.2838541666666667" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable-anydpi/ic_email.xml" value="0.43846153846153846" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable-anydpi/ic_lock.xml" value="0.43846153846153846" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable-anydpi/ic_user.xml" value="0.4453125" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable/custom_avatar.xml" value="0.43125" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable/custom_button.xml" value="0.4453125" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable/custom_button_logout.xml" value="0.4453125" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable/custom_input.xml" value="0.43846153846153846" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable/custom_photo.xml" value="0.4453125" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/drawable/grid_image_view.xml" value="0.4453125" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_log.xml" value="0.42916666666666664" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_reg.xml" value="0.5" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_switch.xml" value="0.42916666666666664" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/custom_image_layout.xml" value="0.42916666666666664" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/drawer_header.xml" value="0.24479166666666666" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_fiszki.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_main.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/drawer_header.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_edit_plan.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_fiszki.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_friday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page1.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page2.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page3.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_profil.xml" value="0.42916666666666664" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/grid_image_view.xml" value="0.42916666666666664" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/login.xml" value="0.3234375" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/registration.xml" value="0.3234375" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.4453125" />
-        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.4453125" />
       </map>
     </option>
   </component>
@@ -60,12 +22,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>

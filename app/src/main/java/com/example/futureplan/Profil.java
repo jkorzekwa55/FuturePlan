@@ -2,6 +2,7 @@ package com.example.futureplan;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,41 +77,88 @@ public class Profil extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
 
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(getContext());
+
+        int images[]={R.drawable.awatar1,R.drawable.awatar2,R.drawable.awatar3,R.drawable.awatar4,R.drawable.awatar5,R.drawable.awatar6,R.drawable.awatar7, R.drawable.awatar8};
+
+        ShapeableImageView profileImage = view.findViewById(R.id.profileImage);
+
         EditText PeditTextEmail = view.findViewById(R.id.PeditTextEmail);
-        String email = PreferenceUtils.getEmail(getContext());
-        PeditTextEmail.setText(email);
+        //String email = PreferenceUtils.getEmail(getContext());
+        //PeditTextEmail.setText(email);
 
         EditText PeditTextN = view.findViewById(R.id.PeditTextN);
-        String name = PreferenceUtils.getName(getContext());
-        PeditTextN.setText(name);
+        //String name = PreferenceUtils.getName(getContext());
+        //PeditTextN.setText(name);
 
         EditText PeditTextName = view.findViewById(R.id.PeditTextName);
-        EditText PeditTextSName = view.findViewById(R.id.PeditTextSName);
-        EditText PeditTextNumber = view.findViewById(R.id.PeditTextNumber);
-        EditText PeditTextDate = view.findViewById(R.id.PeditTextDate);
+        //String firstName = PreferenceUtils.getFirstName(getContext());
+        //PeditTextN.setText(firstName);
 
-        DataBaseHelper dataBaseHelper = new DataBaseHelper(getContext());
+        EditText PeditTextSName = view.findViewById(R.id.PeditTextSName);
+        //String lastName = PreferenceUtils.getLastName(getContext());
+        //PeditTextN.setText(lastName);
+
+        EditText PeditTextNumber = view.findViewById(R.id.PeditTextNumber);
+        //String number = PreferenceUtils.getNumber(getContext());
+        //PeditTextN.setText(number);
+
+        EditText PeditTextDate = view.findViewById(R.id.PeditTextDate);
+        //String date = PreferenceUtils.getDate(getContext());
+        //PeditTextN.setText(date);
+
+        Cursor cursor = dataBaseHelper.fetch();
+        cursor.moveToFirst();
+        PeditTextName.setText(cursor.getString(0));
+        PeditTextSName.setText(cursor.getString(1));
+        PeditTextN.setText(cursor.getString(2));
+        PeditTextEmail.setText(cursor.getString(3));
+        PeditTextNumber.setText(cursor.getString(4));
+        PeditTextDate.setText(cursor.getString(5));
+
+        //profileImage.setImageResource(images[cursor.getInt(6)]);
 
         Button btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 PreferenceUtils.saveEmail("", getContext());
-                PreferenceUtils.saveName("", getContext());
+                //PreferenceUtils.saveName("", getContext());
+                //PreferenceUtils.saveFirstName("", getContext());
+                //PreferenceUtils.saveLastName("", getContext());
+                //PreferenceUtils.saveDate("", getContext());
+                //PreferenceUtils.saveNumber("", getContext());
                 startActivity(new Intent(getContext(), LogActivity.class));
             }
         });
+
+
 
         Button btnSave = view.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String Fname = PeditTextName.getText().toString();
+                String Sname = PeditTextSName.getText().toString();
+                String email = PeditTextEmail.getText().toString();
+                String name = PeditTextN.getText().toString();
+                String number = PeditTextNumber.getText().toString();
+                String date = PeditTextDate.getText().toString();
                 UserModel userModel;
-                userModel = new UserModel(-1, PeditTextName.getText().toString(), PeditTextSName.getText().toString(), PeditTextN.getText().toString(),  PeditTextEmail.getText().toString(), "", PeditTextNumber.getText().toString(), PeditTextDate.getText().toString() );
+                userModel = new UserModel(-1, PeditTextName.getText().toString(), PeditTextSName.getText().toString(), PeditTextN.getText().toString(),  PeditTextEmail.getText().toString(), "", PeditTextNumber.getText().toString(), PeditTextDate.getText().toString(),1);
+                //PreferenceUtils.saveFirstName(Fname, getContext());
+                //PreferenceUtils.saveLastName(Sname, getContext());
+                PreferenceUtils.saveEmail(email, getContext());
+                //PreferenceUtils.saveName(name, getContext());
+                //PreferenceUtils.saveNumber(number, getContext());
+                //PreferenceUtils.saveDate(date, getContext());
+
+
                 String em = PreferenceUtils.getEmail(getContext());
                 dataBaseHelper.updateData(userModel, em);
             }
         });
+
 
 
         FloatingActionButton btnImage = view.findViewById(R.id.btnImage);
@@ -127,7 +176,11 @@ public class Profil extends Fragment {
                 gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        // do something here
+                        System.out.println(position);
+
+                        profileImage.setImageResource(images[position]);
+
+
                     }
                 });
 
