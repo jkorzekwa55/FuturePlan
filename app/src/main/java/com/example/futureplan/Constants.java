@@ -7,5 +7,5 @@ public class Constants {
     public static String KEY_LAST_NAME = "lastName";
     public static String KEY_DATE = "date";
     public static String KEY_NUMBER = "number";
-    public static String KEY_PASSWORD = "password";
+    public static String KEY_AVATAR = "avatar";
 }

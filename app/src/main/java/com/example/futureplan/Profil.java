@@ -84,50 +84,34 @@ public class Profil extends Fragment {
         ShapeableImageView profileImage = view.findViewById(R.id.profileImage);
 
         EditText PeditTextEmail = view.findViewById(R.id.PeditTextEmail);
-        //String email = PreferenceUtils.getEmail(getContext());
-        //PeditTextEmail.setText(email);
-
         EditText PeditTextN = view.findViewById(R.id.PeditTextN);
-        //String name = PreferenceUtils.getName(getContext());
-        //PeditTextN.setText(name);
-
         EditText PeditTextName = view.findViewById(R.id.PeditTextName);
-        //String firstName = PreferenceUtils.getFirstName(getContext());
-        //PeditTextN.setText(firstName);
-
         EditText PeditTextSName = view.findViewById(R.id.PeditTextSName);
-        //String lastName = PreferenceUtils.getLastName(getContext());
-        //PeditTextN.setText(lastName);
-
         EditText PeditTextNumber = view.findViewById(R.id.PeditTextNumber);
-        //String number = PreferenceUtils.getNumber(getContext());
-        //PeditTextN.setText(number);
-
         EditText PeditTextDate = view.findViewById(R.id.PeditTextDate);
-        //String date = PreferenceUtils.getDate(getContext());
-        //PeditTextN.setText(date);
+
 
         Cursor cursor = dataBaseHelper.fetch();
         cursor.moveToFirst();
+
         PeditTextName.setText(cursor.getString(0));
         PeditTextSName.setText(cursor.getString(1));
         PeditTextN.setText(cursor.getString(2));
         PeditTextEmail.setText(cursor.getString(3));
         PeditTextNumber.setText(cursor.getString(4));
+
         PeditTextDate.setText(cursor.getString(5));
 
-        //profileImage.setImageResource(images[cursor.getInt(6)]);
+        String mDrawableName = cursor.getString(6);
+        int resID = getResources().getIdentifier(mDrawableName , "drawable", getContext().getPackageName());
+
+        profileImage.setImageResource(resID);
 
         Button btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 PreferenceUtils.saveEmail("", getContext());
-                //PreferenceUtils.saveName("", getContext());
-                //PreferenceUtils.saveFirstName("", getContext());
-                //PreferenceUtils.saveLastName("", getContext());
-                //PreferenceUtils.saveDate("", getContext());
-                //PreferenceUtils.saveNumber("", getContext());
                 startActivity(new Intent(getContext(), LogActivity.class));
             }
         });
@@ -144,15 +128,12 @@ public class Profil extends Fragment {
                 String name = PeditTextN.getText().toString();
                 String number = PeditTextNumber.getText().toString();
                 String date = PeditTextDate.getText().toString();
-                UserModel userModel;
-                userModel = new UserModel(-1, PeditTextName.getText().toString(), PeditTextSName.getText().toString(), PeditTextN.getText().toString(),  PeditTextEmail.getText().toString(), "", PeditTextNumber.getText().toString(), PeditTextDate.getText().toString(),1);
-                //PreferenceUtils.saveFirstName(Fname, getContext());
-                //PreferenceUtils.saveLastName(Sname, getContext());
-                PreferenceUtils.saveEmail(email, getContext());
-                //PreferenceUtils.saveName(name, getContext());
-                //PreferenceUtils.saveNumber(number, getContext());
-                //PreferenceUtils.saveDate(date, getContext());
+                String avatar = PreferenceUtils.getAvatar(getContext());
 
+                UserModel userModel;
+                userModel = new UserModel(-1, Fname, Sname, name,  email, "", number, date,avatar);
+
+                PreferenceUtils.saveEmail(email, getContext());
 
                 String em = PreferenceUtils.getEmail(getContext());
                 dataBaseHelper.updateData(userModel, em);
@@ -176,10 +157,9 @@ public class Profil extends Fragment {
                 gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        System.out.println(position);
-
                         profileImage.setImageResource(images[position]);
-
+                        PreferenceUtils.saveAvatar("awatar" + (position+1),getContext());
+                        System.out.println(PreferenceUtils.getAvatar(getContext()));
 
                     }
                 });

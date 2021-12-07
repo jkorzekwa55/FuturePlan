@@ -52,16 +52,16 @@ public class PreferenceUtils {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         return prefs.getString(Constants.KEY_LAST_NAME, null);
     }
-    public static boolean saveDate(String date, Context ctx){
+    public static boolean saveAvatar(String avatar, Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         SharedPreferences.Editor prefsEditor = prefs.edit();
-        prefsEditor.putString(Constants.KEY_LAST_NAME,date);
+        prefsEditor.putString(Constants.KEY_AVATAR,avatar);
         prefsEditor.apply();
         return true;
     }
-    public static String getDate(Context ctx){
+    public static String getAvatar(Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_DATE, null);
+        return prefs.getString(Constants.KEY_AVATAR,null);
     }
     public static boolean saveNumber(String number, Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);

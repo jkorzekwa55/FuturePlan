@@ -9,7 +9,7 @@ public class UserModel {
     public String password;
     public String number;
     public String date;
-    public int avatarID;
+    public String avatarID;
 
     public UserModel(int id, String name, String email, String password ){
         this.id = id;
@@ -17,7 +17,7 @@ public class UserModel {
         this.email = email;
         this.password = password;
     }
-    public UserModel(int id, String firstName, String secondName,String name, String email, String password, String number, String date, int avatarID){
+    public UserModel(int id, String firstName, String secondName,String name, String email, String password, String number, String date, String avatarID){
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -89,7 +89,7 @@ public class UserModel {
         return date;
     }
 
-    public int getAvatarID() {
+    public String getAvatarID() {
         return avatarID;
     }
 
