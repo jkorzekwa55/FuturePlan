@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -67,6 +68,8 @@ public class Sunday extends Fragment {
         ImageView next = view.findViewById(R.id.next);
         ImageView prev = view.findViewById(R.id.prev);
         FloatingActionButton edit = view.findViewById(R.id.editPlan);
+        //
+
 
         next.setOnClickListener(new View.OnClickListener(){
             @Override
