@@ -1,5 +1,6 @@
 package com.example.futureplan;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +67,24 @@ public class EditPlan extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edit_plan, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_edit_plan, container, false);
+
+        TextInputLayout txt = view.findViewById(R.id.txtinput);
+        TextInputLayout txt2 = view.findViewById(R.id.calendarInput);
+        txt.setStartIconTintList(null);
+        txt2.setStartIconTintList(null);
+
+
+        //String[] items = {"Historia", "Informatyka", "Język Polski", "Matematyka"}; // 2 Sposoby
+        String[] items = getResources().getStringArray(R.array.subjectsarray);
+        AutoCompleteTextView autoCompleteTxt;
+        ArrayAdapter<String> adapterItems;
+
+        autoCompleteTxt = view.findViewById(R.id.autoCompleteTextView);
+        adapterItems = new ArrayAdapter<String>(requireContext(), R.layout.subjects, items);
+        autoCompleteTxt.setAdapter(adapterItems);
+
+        return view;
     }
 }
