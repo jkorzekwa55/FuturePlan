@@ -5,15 +5,28 @@
       <map>
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_log.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_main.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/activity_reg.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/custom_image_layout.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/drawer_header.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_edit_plan.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_fiszki.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_friday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_monday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_notatki.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_o_aplikacji.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page1.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page2.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_plan_lekcji_page3.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_pomoce_naukowe.xml" value="0.42916666666666664" />
         <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_profil.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_saturday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_sunday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_terminarz.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_thursday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_tuesday.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_ustawienia.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Julia0n3/AndroidStudioProjects/FuturePlan/FuturePlan/app/src/main/res/layout/fragment_wednesday.xml" value="0.42916666666666664" />
       </map>
     </option>
   </component>
