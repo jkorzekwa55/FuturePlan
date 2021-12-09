@@ -1,14 +1,15 @@
 package com.example.futureplan;
 
 public class UserModel {
-    private int id;
-    private String firstName;
-    private String secondName;
-    private String name;
-    private String email;
-    private String password;
-    private String number;
-    private String date;
+    public int id;
+    public String firstName;
+    public String secondName;
+    public String name;
+    public String email;
+    public String password;
+    public String number;
+    public String date;
+    public String avatarID;
 
     public UserModel(int id, String name, String email, String password ){
         this.id = id;
@@ -16,7 +17,7 @@ public class UserModel {
         this.email = email;
         this.password = password;
     }
-    public UserModel(int id, String firstName, String secondName,String name, String email, String password, String number, String date){
+    public UserModel(int id, String firstName, String secondName,String name, String email, String password, String number, String date, String avatarID){
         this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
@@ -25,6 +26,7 @@ public class UserModel {
         this.password = password;
         this.number = number;
         this.date = date;
+        this.avatarID = avatarID;
     }
 
     public int getId() {
@@ -85,6 +87,10 @@ public class UserModel {
 
     public String getDate() {
         return date;
+    }
+
+    public String getAvatarID() {
+        return avatarID;
     }
 
     public void setDate(String date) {
