@@ -2,6 +2,7 @@ package com.example.futureplan;
 
 import android.app.Activity;
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
-    private int[] images_id = {R.drawable.awatar1,R.drawable.awatar2,R.drawable.awatar3,R.drawable.awatar4,R.drawable.awatar5,R.drawable.awatar6,R.drawable.awatar7,R.drawable.awatar8,R.drawable.awatar9};
+    public int[] images_id = {R.drawable.awatar1,R.drawable.awatar2,R.drawable.awatar3,R.drawable.awatar4,R.drawable.awatar5,R.drawable.awatar6,R.drawable.awatar7,R.drawable.awatar8,R.drawable.awatar9};
     Context ctx;
     ImageAdapter(Context ctx)
     {
@@ -42,4 +43,6 @@ public class ImageAdapter extends BaseAdapter {
 
         return convertView;
     }
+
+
 }

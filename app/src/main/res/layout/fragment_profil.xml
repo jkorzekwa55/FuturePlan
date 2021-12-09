@@ -8,7 +8,7 @@
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profileImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="40dp"
@@ -45,7 +45,7 @@
         android:paddingStart="15dp"
         app:layout_constraintBottom_toTopOf="@+id/PeditTextSName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -61,7 +61,7 @@
         android:paddingStart="15dp"
         app:layout_constraintBottom_toTopOf="@+id/PeditTextN"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
         app:layout_constraintTop_toBottomOf="@+id/PeditTextName" />
 
     <EditText
@@ -78,7 +78,7 @@
         app:layout_constraintBottom_toTopOf="@+id/PeditTextEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
 
     <EditText
         android:id="@+id/PeditTextEmail"

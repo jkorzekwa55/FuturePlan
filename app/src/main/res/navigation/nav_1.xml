@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_1"
-    app:startDestination="@id/menuProfile">
+    app:startDestination="@id/profileEmail">
     <fragment
-        android:id="@+id/menuProfile"
+        android:id="@+id/profileEmail"
         android:name="com.example.futureplan.Profil"
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" >

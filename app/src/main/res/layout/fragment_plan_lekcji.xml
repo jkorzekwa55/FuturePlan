@@ -8,13 +8,13 @@
     android:paddingTop="10dp" >
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tab_layout"
-        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        android:layout_marginTop="28dp"
         android:background="@color/blue2"
-        app:tabTextColor="@color/white"
-        />
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        app:tabTextColor="@color/white" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager2"

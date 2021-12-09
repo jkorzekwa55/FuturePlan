@@ -37,7 +37,7 @@
     <item android:title="@string/inne">
         <menu>
             <item
-                android:id="@+id/menuProfile"
+                android:id="@+id/profileEmail"
                 android:icon="@drawable/profile_icon2"
                 android:title="@string/profile"/>
             <item

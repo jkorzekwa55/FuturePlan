@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.view.contentcapture.DataRemovalRequest;
 
 import androidx.annotation.Nullable;
 
@@ -19,6 +20,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_USER_NUMBER = "USER_NUMBER";
     public static final String COLUMN_USER_DATE = "USER_DATE";
     public static final String COLUMN_ID = "ID";
+    public static final String COLUMN_USER_AVATAR = "USER_AVATAR";
 
     public DataBaseHelper(@Nullable Context context) {
             super(context, "users.db", null, 1);
@@ -26,7 +28,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + TABLE_NAME + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_FIRST_NAME + " TEXT, " + COLUMN_USER_SECOND_NAME + " TEXT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, "  + COLUMN_USER_PASSWORD + " TEXT, "  + COLUMN_USER_NUMBER + " TEXT, "  + COLUMN_USER_DATE + " TEXT)";
+        String createTableStatement = "CREATE TABLE " + TABLE_NAME + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_FIRST_NAME + " TEXT, " + COLUMN_USER_SECOND_NAME + " TEXT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, "  + COLUMN_USER_PASSWORD + " TEXT, "  + COLUMN_USER_NUMBER + " TEXT, "  + COLUMN_USER_DATE + " TEXT, "  + COLUMN_USER_AVATAR + " TEXT)";
 
         db.execSQL(createTableStatement);
     }
@@ -48,6 +50,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contentValues.put(COLUMN_USER_PASSWORD, userModel.getPassword());
         contentValues.put(COLUMN_USER_NUMBER, userModel.getNumber());
         contentValues.put(COLUMN_USER_DATE, userModel.getDate());
+        contentValues.put(COLUMN_USER_AVATAR, userModel.getAvatarID());
 
         long insert = db.insert(TABLE_NAME, null, contentValues);
         if(insert == -1){
@@ -67,6 +70,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contentValues.put(COLUMN_USER_EMAIL, userModel.getEmail());
         contentValues.put(COLUMN_USER_NUMBER, userModel.getNumber());
         contentValues.put(COLUMN_USER_DATE, userModel.getDate());
+        contentValues.put(COLUMN_USER_AVATAR, userModel.getAvatarID());
+
 
         long insert = db.update(TABLE_NAME, contentValues,COLUMN_USER_EMAIL + " = ?", new String[] {email});
         if(insert == -1){
@@ -85,6 +90,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         else
             return false;
     }
+
+    public Cursor fetch() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.query(DataBaseHelper.TABLE_NAME, new String[]{DataBaseHelper.COLUMN_USER_FIRST_NAME, DataBaseHelper.COLUMN_USER_SECOND_NAME, DataBaseHelper.COLUMN_USER_NAME , DataBaseHelper.COLUMN_USER_EMAIL,DataBaseHelper.COLUMN_USER_NUMBER, DataBaseHelper.COLUMN_USER_DATE, DataBaseHelper.COLUMN_USER_AVATAR}, null, null, null, null, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
+        }
+        return cursor;
+    }
+
     public Boolean checkpassword(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_USER_EMAIL + " = ? and " + COLUMN_USER_PASSWORD + " = ?", new String[] {username,password});
@@ -93,4 +108,5 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         else
             return false;
     }
+
 }
