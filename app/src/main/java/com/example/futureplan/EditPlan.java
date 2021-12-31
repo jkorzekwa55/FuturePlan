@@ -1,9 +1,11 @@
 package com.example.futureplan;
 
 import android.app.AlertDialog;
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -32,6 +35,7 @@ public class EditPlan extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private String subject;
 
     public EditPlan() {
         // Required empty public constructor
@@ -84,6 +88,41 @@ public class EditPlan extends Fragment {
         autoCompleteTxt = view.findViewById(R.id.autoCompleteTextView);
         adapterItems = new ArrayAdapter<String>(requireContext(), R.layout.subjects, items);
         autoCompleteTxt.setAdapter(adapterItems);
+        autoCompleteTxt.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                PreferenceUtils.saveSubject(autoCompleteTxt.getText().toString(),getContext());
+                subject = autoCompleteTxt.getText().toString();
+                System.out.println(PreferenceUtils.getSubject(getContext()));
+            }
+        });
+
+
+
+        String day = PreferenceUtils.getDay(getContext());
+        System.out.println(day);
+
+        subject = PreferenceUtils.getSubject(getContext());
+        System.out.println(subject);
+
+        DataBaseTimetable dataBaseTimetable = new DataBaseTimetable(getContext());
+
+        Button saveButton = view.findViewById(R.id.saveButton);
+
+        EditText timeEdTxt = view.findViewById(R.id.timeEdTxt);
+        EditText classEdText = view.findViewById(R.id.classEdText);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TimetableModel timetableModel;
+                timetableModel = new TimetableModel(-1, day, subject,timeEdTxt.getText().toString(),classEdText.getText().toString());
+                boolean success = dataBaseTimetable.insertData(timetableModel);
+                Toast.makeText(getContext(), "Success= " + success, Toast.LENGTH_SHORT).show();
+                Navigation.findNavController(view).navigate(R.id.action_editPlan2_to_monday);
+            }
+        });
+
 
         return view;
     }

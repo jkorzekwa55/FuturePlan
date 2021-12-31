@@ -55,5 +55,44 @@
             android:paddingBottom="16dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <EditText
+        android:id="@+id/timeEdTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Czas rozpoczecia i zakonczenia"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableStart="@drawable/time_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawablePadding="20px"
+        android:paddingLeft="35px"
+        app:layout_constraintTop_toBottomOf="@+id/calendarInput" />
+
+    <EditText
+        android:id="@+id/classEdText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sala"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:drawableStart="@drawable/class_icon"
+        android:drawablePadding="40px"
+        android:paddingLeft="50px"
+        app:layout_constraintTop_toBottomOf="@+id/timeEdTxt" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="294dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="42dp"
+        android:text="zapisz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarInput" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,6 @@ public class Constants {
     public static String KEY_DATE = "date";
     public static String KEY_NUMBER = "number";
     public static String KEY_AVATAR = "avatar";
+    public static String KEY_DAY = "day";
+    public static String KEY_SUBJECT = "subject";
 }

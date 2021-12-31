@@ -83,6 +83,7 @@ public class Profil extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
 
+
         DataBaseHelper dataBaseHelper = new DataBaseHelper(getContext());
 
         int images[]={R.drawable.awatar1,R.drawable.awatar2,R.drawable.awatar3,R.drawable.awatar4,R.drawable.awatar5,R.drawable.awatar6,R.drawable.awatar7, R.drawable.awatar8};
@@ -109,8 +110,8 @@ public class Profil extends Fragment {
         PeditTextDate.setText(cursor.getString(5));
 
         String mDrawableName = cursor.getString(6);
-        int resID = getResources().getIdentifier(mDrawableName , "drawable", getContext().getPackageName());
 
+        int resID = getResources().getIdentifier(mDrawableName,"drawable",getContext().getPackageName());
         profileImage.setImageResource(resID);
 
         Button btnLogout = view.findViewById(R.id.btnLogout);
@@ -176,6 +177,8 @@ public class Profil extends Fragment {
                 builder.show();
             }
         });
+
+
 
 
 
