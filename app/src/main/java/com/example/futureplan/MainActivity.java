@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageProfile = header.findViewById(R.id.imageProfile);
         DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
 
-        Cursor cursor = dataBaseHelper.fetch();
+        /**Cursor cursor = dataBaseHelper.fetch();
         cursor.moveToFirst();
 
         profileName.setText(cursor.getString(0));
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         String mDrawableName = cursor.getString(6);
         int resID = getResources().getIdentifier(mDrawableName , "drawable", this.getPackageName());
 
-        imageProfile.setImageResource(resID);
+        imageProfile.setImageResource(resID);**/
 
         //-----------------------------------\\
         }

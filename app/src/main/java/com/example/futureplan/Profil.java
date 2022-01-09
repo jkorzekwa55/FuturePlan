@@ -100,7 +100,7 @@ public class Profil extends Fragment {
         Cursor cursor = dataBaseHelper.fetch();
         cursor.moveToFirst();
 
-        PeditTextName.setText(cursor.getString(0));
+       /** PeditTextName.setText(cursor.getString(0));
         PeditTextSName.setText(cursor.getString(1));
         PeditTextN.setText(cursor.getString(2));
         PeditTextEmail.setText(cursor.getString(3));
@@ -111,7 +111,7 @@ public class Profil extends Fragment {
         String mDrawableName = cursor.getString(6);
         int resID = getResources().getIdentifier(mDrawableName , "drawable", getContext().getPackageName());
 
-        profileImage.setImageResource(resID);
+        profileImage.setImageResource(resID);**/
 
         Button btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
