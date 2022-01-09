@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homework_nav"
+    app:startDestination="@id/homework">
+
+
+    <fragment
+        android:id="@+id/editHomework"
+        android:name="com.example.futureplan.EditHomework"
+        android:label="fragment_edit_homework"
+        tools:layout="@layout/fragment_edit_homework" >
+        <action
+            android:id="@+id/action_editHomework_to_homework"
+            app:destination="@id/homework" />
+    </fragment>
+    <fragment
+        android:id="@+id/homework"
+        android:name="com.example.futureplan.Homework"
+        android:label="fragment_homework"
+        tools:layout="@layout/fragment_homework" >
+        <action
+            android:id="@+id/action_homework_to_editHomework"
+            app:destination="@id/editHomework" />
+    </fragment>
+</navigation>

@@ -22,8 +22,6 @@ public class DataBaseTimetable extends SQLiteOpenHelper {
     public static final String COLUMN_CLASSROOM = "CLASSROOM";
     public static final String COLUMN_ID = "ID";
 
-    private SQLiteDatabase mDatabase;
-
     public DataBaseTimetable(@Nullable Context context) {
         super(context, "timetable.db", null, 1);
     }
@@ -127,6 +125,53 @@ public class DataBaseTimetable extends SQLiteOpenHelper {
 
         return list;
     }
+
+    public ArrayList<HashMap<String, String>> getListTerminarz(Context ctx, String nameOfDay){
+        DataBaseTimetable dataBaseTimetable = new DataBaseTimetable(ctx);
+
+        Cursor cursor = dataBaseTimetable.fetch();
+        cursor.moveToFirst();
+
+        for(int i = 0 ; i < cursor.getCount(); i++) {
+            if (cursor.getString(0).equals(nameOfDay)) {
+                for (int j = 0; j < TimetableTable.length; j++) {
+                    if(TimetableTable[j][0].equals("")) {
+                        if (cursor.getString(1) != null) {
+                            TimetableTable[j][0] = cursor.getString(1);
+                            TimetableTable[j][1] = cursor.getString(2);
+                        }
+                        break;
+                    }
+                }
+            }
+            cursor.moveToNext();
+        }
+        int numberOfFields = 0;
+        for (int j = 0; j < TimetableTable.length; j++) {
+            if(!TimetableTable[j][0].equals("")) {
+                numberOfFields++;
+            }else{
+                break;
+            }
+        }
+
+
+        ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String,String>>();
+
+        HashMap<String,String> item;
+        for(int i=0;i<numberOfFields;i++){
+            item = new HashMap<String,String>();
+            item.put( "line1", TimetableTable[i][0]);
+            item.put( "line2", TimetableTable[i][1]);
+            list.add( item );
+        }
+
+
+
+
+        return list;
+    }
+
 
 
 }

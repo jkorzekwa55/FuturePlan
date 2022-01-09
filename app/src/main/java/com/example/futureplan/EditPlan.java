@@ -93,17 +93,14 @@ public class EditPlan extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 PreferenceUtils.saveSubject(autoCompleteTxt.getText().toString(),getContext());
                 subject = autoCompleteTxt.getText().toString();
-                System.out.println(PreferenceUtils.getSubject(getContext()));
             }
         });
 
 
 
         String day = PreferenceUtils.getDay(getContext());
-        System.out.println(day);
 
         subject = PreferenceUtils.getSubject(getContext());
-        System.out.println(subject);
 
         DataBaseTimetable dataBaseTimetable = new DataBaseTimetable(getContext());
 

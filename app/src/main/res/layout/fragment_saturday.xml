@@ -63,7 +63,7 @@
         android:backgroundTint="@color/blue1"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_edit"
+        android:src="@drawable/ic_plus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:tint="@android:color/white" />
