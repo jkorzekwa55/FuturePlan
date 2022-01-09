@@ -1,16 +1,29 @@
 package com.example.futureplan;
 
+import android.database.Cursor;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +31,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  * create an instance of this fragment.
  */
 public class Monday extends Fragment {
+    private SimpleAdapter sa;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -68,6 +82,20 @@ public class Monday extends Fragment {
         ImageView next = view.findViewById(R.id.next);
         ImageView prev = view.findViewById(R.id.prev);
         FloatingActionButton edit = view.findViewById(R.id.editPlan);
+
+        TextView day = view.findViewById(R.id.dzien);
+        String dayS = day.getText().toString();
+
+        PreferenceUtils.saveDay(dayS, getContext());
+
+        DataBaseTimetable dataBaseTimetable = new DataBaseTimetable(getContext());
+
+        ArrayList<HashMap<String,String>> list = dataBaseTimetable.getAdapterList(getContext(),dayS);
+        sa = new SimpleAdapter(getContext(), list,
+                R.layout.list_timetable,
+                new String[] { "line1","line2","line3" },
+                new int[] {R.id.line_a, R.id.line_b,R.id.line_c});
+        ((ListView)view.findViewById(R.id.listTimetable)).setAdapter(sa);
 
         next.setOnClickListener(new View.OnClickListener(){
             @Override

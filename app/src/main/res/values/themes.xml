@@ -35,4 +35,20 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <!--Calendar -->
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/blue1</item>
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+
+
+
 </resources>

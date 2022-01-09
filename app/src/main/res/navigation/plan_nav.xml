@@ -137,4 +137,5 @@
             android:id="@+id/action_editPlan2_to_sunday"
             app:destination="@id/sunday" />
     </fragment>
+
 </navigation>

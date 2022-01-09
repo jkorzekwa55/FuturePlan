@@ -3,25 +3,26 @@ package com.example.futureplan;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PomoceNaukowe#newInstance} factory method to
+ * Use the {@link TimetableTest#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PomoceNaukowe extends Fragment {
+public class TimetableTest extends Fragment {
+    private SimpleAdapter sa;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +33,7 @@ public class PomoceNaukowe extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PomoceNaukowe() {
+    public TimetableTest() {
         // Required empty public constructor
     }
 
@@ -42,11 +43,11 @@ public class PomoceNaukowe extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PomoceNaukowe.
+     * @return A new instance of fragment TimetableTest.
      */
     // TODO: Rename and change types and number of parameters
-    public static PomoceNaukowe newInstance(String param1, String param2) {
-        PomoceNaukowe fragment = new PomoceNaukowe();
+    public static TimetableTest newInstance(String param1, String param2) {
+        TimetableTest fragment = new TimetableTest();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,20 +67,26 @@ public class PomoceNaukowe extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_pomoce_naukowe, container, false);
+        View view = inflater.inflate(R.layout.fragment_timetable_test, container, false);
 
-        GridView gridView = view.findViewById(R.id.gridView);
+        DataBaseTests dataBaseTests = new DataBaseTests(getContext());
 
-        String items[] = {"Matematyka", "Informatyka", "Język Polski", "Historia", "Chemia", "Biologia"};
+        ArrayList<HashMap<String,String>> list = dataBaseTests.getAdapterList(getContext());
 
-        ArrayList<String> carL = new ArrayList<String>();
-        carL.addAll( Arrays.asList(items) );
+        sa = new SimpleAdapter(getContext(), list,
+                R.layout.list_timetable,
+                new String[] { "line1","line2","line3" },
+                new int[] {R.id.line_a, R.id.line_b,R.id.line_c});
+        ((ListView)view.findViewById(R.id.listTests)).setAdapter(sa);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.grid_layout, carL);
+        FloatingActionButton editTests = view.findViewById(R.id.editTests);
 
-        gridView.setAdapter(adapter);
-
-
+        editTests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_timetableTest_to_editTimetableTest);
+            }
+        });
 
         return view;
     }

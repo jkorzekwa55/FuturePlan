@@ -74,4 +74,27 @@ public class PreferenceUtils {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         return prefs.getString(Constants.KEY_NUMBER, null);
     }
+
+    public static boolean saveDay(String day, Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        prefsEditor.putString(Constants.KEY_DAY,day);
+        prefsEditor.apply();
+        return true;
+    }
+    public static String getDay(Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        return prefs.getString(Constants.KEY_DAY, null);
+    }
+    public static boolean saveSubject(String subject, Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        prefsEditor.putString(Constants.KEY_SUBJECT,subject);
+        prefsEditor.apply();
+        return true;
+    }
+    public static String getSubject(Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        return prefs.getString(Constants.KEY_SUBJECT, null);
+    }
 }
