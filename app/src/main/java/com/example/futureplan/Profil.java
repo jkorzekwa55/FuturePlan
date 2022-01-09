@@ -111,6 +111,7 @@ public class Profil extends Fragment {
 
         String mDrawableName = cursor.getString(6);
 
+
         int resID = getResources().getIdentifier(mDrawableName,"drawable",getContext().getPackageName());
         profileImage.setImageResource(resID);
 
