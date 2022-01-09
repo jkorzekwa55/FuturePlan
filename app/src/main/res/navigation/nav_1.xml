@@ -33,6 +33,12 @@
         android:name="com.example.futureplan.Fiszki"
         android:label="fragment_fiszki"
         tools:layout="@layout/fragment_fiszki" >
+        <action
+            android:id="@+id/action_menuFiszki_to_addNewFlashcards"
+            app:destination="@id/addNewFlashcards" />
+        <action
+            android:id="@+id/action_menuFiszki_to_learnFlashcards"
+            app:destination="@id/learnFlashcards" />
     </fragment>
     <fragment
         android:id="@+id/menuNotatki"
@@ -51,5 +57,23 @@
         android:name="com.example.futureplan.oAplikacji"
         android:label="fragment_o_aplikacji"
         tools:layout="@layout/fragment_o_aplikacji" >
+    </fragment>
+    <fragment
+        android:id="@+id/addNewFlashcards"
+        android:name="com.example.futureplan.addNewFlashcards"
+        android:label="fragment_add_new_flashcards"
+        tools:layout="@layout/fragment_add_new_flashcards" >
+        <action
+            android:id="@+id/action_addNewFlashcards_to_menuFiszki"
+            app:destination="@id/menuFiszki" />
+    </fragment>
+    <fragment
+        android:id="@+id/learnFlashcards"
+        android:name="com.example.futureplan.LearnFlashcards"
+        android:label="fragment_learn_flashcards"
+        tools:layout="@layout/fragment_learn_flashcards" >
+        <action
+            android:id="@+id/action_learnFlashcards_to_menuFiszki"
+            app:destination="@id/menuFiszki" />
     </fragment>
 </navigation>

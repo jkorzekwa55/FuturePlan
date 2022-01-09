@@ -70,12 +70,13 @@ public class EditPlan extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_edit_plan, container, false);
 
+        //Ustawienie koloru ikonek
         TextInputLayout txt = view.findViewById(R.id.txtinput);
         TextInputLayout txt2 = view.findViewById(R.id.calendarInput);
         txt.setStartIconTintList(null);
         txt2.setStartIconTintList(null);
 
-
+        //Pole wybierz przedmiot
         //String[] items = {"Historia", "Informatyka", "Język Polski", "Matematyka"}; // 2 Sposoby
         String[] items = getResources().getStringArray(R.array.subjectsarray);
         AutoCompleteTextView autoCompleteTxt;
@@ -84,6 +85,14 @@ public class EditPlan extends Fragment {
         autoCompleteTxt = view.findViewById(R.id.autoCompleteTextView);
         adapterItems = new ArrayAdapter<String>(requireContext(), R.layout.subjects, items);
         autoCompleteTxt.setAdapter(adapterItems);
+
+        //Wybór dnia danej lekcji
+        String[] daysOfWeek = {"Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"};
+        AutoCompleteTextView autoCompleteTxt2;
+        ArrayAdapter<String> adapterItems2;
+        autoCompleteTxt2 = view.findViewById(R.id.autoCompleteTextView2);
+        adapterItems2 = new ArrayAdapter<String>(requireContext(), R.layout.subjects, daysOfWeek);
+        autoCompleteTxt2.setAdapter(adapterItems2);
 
         return view;
     }

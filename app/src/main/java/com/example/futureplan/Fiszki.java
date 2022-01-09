@@ -2,11 +2,27 @@ package com.example.futureplan;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.ScrollView;
+
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +74,54 @@ public class Fiszki extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fiszki, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_fiszki, container, false);
+        RecyclerView fiszkiRecycler = view.findViewById(R.id.fiszkiRecycler);
+        ExtendedFloatingActionButton efab = view.findViewById(R.id.FABfiszki);
+        NestedScrollView sv = view.findViewById(R.id.scrollView2);
+
+
+        fiszkiRecycler.setLayoutManager(
+                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        );
+
+        // Floating Action Button Hide and Show
+
+        sv.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (scrollY > oldScrollY) {
+                    efab.hide();
+                }else {
+                    efab.show();
+                }
+            }
+        });
+
+
+
+        // Loading images
+        List<CardItem> cardItems = new ArrayList<>();
+        cardItems.add(new CardItem("Niemiecki"));
+        cardItems.add(new CardItem("Historia"));
+
+        fiszkiRecycler.setAdapter(new CardAdapter(cardItems));
+
+
+        Button fiszka = view.findViewById(R.id.buttonFiszki);
+
+
+
+        //Extended Floating Action Button on click to add new flashcards
+        efab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_menuFiszki_to_addNewFlashcards);
+            }
+        });
+
+
+
+        return view;
     }
 }
