@@ -125,6 +125,8 @@ public class EditTimetableTest extends Fragment {
                 month = month + 1;
                 System.out.println("onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
 
+                dayString = day + "";
+                monthString = month + "";
                 if(day<10){
                     dayString = "0" + day;
                 }
@@ -133,7 +135,7 @@ public class EditTimetableTest extends Fragment {
                 }
                 date = dayString + "." + monthString;
 
-                dayEdTxtTests.setText(dayString + "." + monthString);
+                dayEdTxtTests.setText(date);
             }
         };
 

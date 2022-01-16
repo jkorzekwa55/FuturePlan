@@ -97,4 +97,16 @@ public class PreferenceUtils {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         return prefs.getString(Constants.KEY_SUBJECT, null);
     }
+
+    public static boolean saveSubjectID(int subject_id, Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        prefsEditor.putInt(Constants.KEY_ID_SUBJECT_POMOCE,subject_id);
+        prefsEditor.apply();
+        return true;
+    }
+    public static int getSubjectID(Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        return prefs.getInt(Constants.KEY_ID_SUBJECT_POMOCE,0);
+    }
 }

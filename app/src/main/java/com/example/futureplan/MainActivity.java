@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(PreferenceUtils.getEmail(this) == null || PreferenceUtils.getEmail(this).equals("")){
-            //startActivity(new Intent(MainActivity.this, LogActivity.class));
+            startActivity(new Intent(MainActivity.this, LogActivity.class));
         }
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
 
@@ -62,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
         TextView profileEmail = header.findViewById(R.id.profileEmail);
         ImageView imageProfile = header.findViewById(R.id.imageProfile);
         DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
+        
+      
+        Cursor cursor = dataBaseHelper.fetch();
 
-     /**   Cursor cursor = dataBaseHelper.fetch();
         cursor.moveToFirst();
 
         profileName.setText(cursor.getString(0));
@@ -71,9 +73,10 @@ public class MainActivity extends AppCompatActivity {
         profileEmail.setText(cursor.getString(3));
 
         String mDrawableName = cursor.getString(6);
+
         int resID = getResources().getIdentifier(mDrawableName , "drawable", this.getPackageName());
 
-        imageProfile.setImageResource(resID);**/
+        imageProfile.setImageResource(resID);
 
 
 

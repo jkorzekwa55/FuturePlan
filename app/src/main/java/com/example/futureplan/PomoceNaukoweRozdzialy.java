@@ -3,51 +3,39 @@ package com.example.futureplan;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.GridView;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PomoceNaukowe#newInstance} factory method to
+ * Use the {@link PomoceNaukoweRozdzialy#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PomoceNaukowe extends Fragment {
-    private int age;
-    
-    
+public class PomoceNaukoweRozdzialy extends Fragment {
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public PomoceNaukowe() {
+    public PomoceNaukoweRozdzialy() {
         // Required empty public constructor
     }
 
@@ -57,11 +45,11 @@ public class PomoceNaukowe extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PomoceNaukowe.
+     * @return A new instance of fragment PomoceNaukoweRozdzialy.
      */
     // TODO: Rename and change types and number of parameters
-    public static PomoceNaukowe newInstance(String param1, String param2) {
-        PomoceNaukowe fragment = new PomoceNaukowe();
+    public static PomoceNaukoweRozdzialy newInstance(String param1, String param2) {
+        PomoceNaukoweRozdzialy fragment = new PomoceNaukoweRozdzialy();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -81,7 +69,41 @@ public class PomoceNaukowe extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_pomoce_naukowe, container, false);
+        View view = inflater.inflate(R.layout.fragment_pomoce_naukowe_rozdzialy, container, false);
+
+        Button btnBack = view.findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_pomoceNaukoweRozdzialy_to_gridviewPomoce);
+            }
+        });
+
+        String jsonFileString = MyJSON.getAssetJsonData(getContext());
+        Gson gson = new Gson();
+        Type listSubjectsType = new TypeToken<List<Subjects>>() { }.getType();
+        List<Subjects> subject = gson.fromJson(jsonFileString, listSubjectsType);
+
+
+        ListView listView = view.findViewById(R.id.listViewParagraphs);
+
+        ArrayList<String> items = new ArrayList<String>();
+
+        int subject_id = PreferenceUtils.getSubjectID(getContext());
+        int numberOfParagraphs = subject.get(subject_id).getParagraphs().size();
+
+        for(int j=0; j<numberOfParagraphs;j++){
+            System.out.println(subject.get(subject_id).getParagraphs().get(j));
+            items.add(subject.get(subject_id).getParagraphs().get(j));
+        }
+
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, items);
+
+        listView.setAdapter(itemsAdapter);
+
+
+
 
         return view;
     }
