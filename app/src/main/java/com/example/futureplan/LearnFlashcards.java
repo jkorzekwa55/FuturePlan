@@ -1,5 +1,6 @@
 package com.example.futureplan;
 
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.wajahatkarim3.easyflipview.EasyFlipView;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +65,46 @@ public class LearnFlashcards extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_learn_flashcards, container, false);
+        View view = inflater.inflate(R.layout.fragment_learn_flashcards, container, false);
+
+        TextView frontOpis = view.findViewById(R.id.frontOpis);
+        TextView frontNotatka = view.findViewById(R.id.frontNotatka);
+        TextView backOpis = view.findViewById(R.id.backOpis);
+        TextView backNotatka = view.findViewById(R.id.backNotatka);
+        Button nextFlash = view.findViewById(R.id.nextFlash);
+        FCDBHelper DB = new FCDBHelper(getContext());
+        EasyFlipView easyFlipView = view.findViewById(R.id.easyFlipView);
+
+        String nazwa = getArguments().getString("nazwa");
+        Cursor cursor = DB.getFlashKit(nazwa);
+
+        cursor.move(1);
+        frontOpis.setText(cursor.getString(2));
+        frontNotatka.setText(cursor.getString(3));
+        backOpis.setText(cursor.getString(4));
+        backNotatka.setText(cursor.getString(5));
+
+
+        nextFlash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(cursor.getPosition() != cursor.getCount()-1) {
+                    cursor.moveToNext();
+                    if(easyFlipView.isBackSide()){
+                        easyFlipView.flipTheView();
+                    }
+                }
+                frontOpis.setText(cursor.getString(2));
+                frontNotatka.setText(cursor.getString(3));
+                backOpis.setText(cursor.getString(4));
+                backNotatka.setText(cursor.getString(5));
+            }
+        });
+
+
+
+
+        return view;
     }
 }

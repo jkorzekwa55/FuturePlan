@@ -15,6 +15,15 @@ import java.util.List;
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder> {
 
     private List<CardItem> cardItems;
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public CardAdapter(List<CardItem> cardItems) {
         this.cardItems = cardItems;
@@ -49,10 +58,24 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
             fiszkisrc = itemView.findViewById(R.id.fiszkiText);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(mListener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
 
         void setCardImage(CardItem cardItem) {
             fiszkisrc.setText(cardItem.getText());
         }
+
+
     }
 }
