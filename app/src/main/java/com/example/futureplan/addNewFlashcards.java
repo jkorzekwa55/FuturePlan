@@ -3,6 +3,7 @@ package com.example.futureplan;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -71,56 +73,42 @@ public class addNewFlashcards extends Fragment {
 
         FloatingActionButton addNewFlash = view.findViewById(R.id.addNewFlashcardsButton);
         ExtendedFloatingActionButton saveFlashcard = view.findViewById(R.id.saveFlashcards);
-        RecyclerView fiszkiRecycler = view.findViewById(R.id.fiszkiRecycler);
+        EditText flashcardsName = view.findViewById(R.id.nazwaZestawu);
+        EditText opis1 = view.findViewById(R.id.opis);
+        EditText notatka1 = view.findViewById(R.id.notatka);
+        EditText opis2 = view.findViewById(R.id.opis2);
+        EditText notatka2 = view.findViewById(R.id.notatka2);
+        FCDBHelper DB = new FCDBHelper(getContext());
 
 
-
-        fiszkiRecycler.setLayoutManager(
-                new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL)
-        );
-
-        ArrayList<Flashcard> flashcardList = new ArrayList<>();
 
         addNewFlash.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                flashcardList.add(new Flashcard());
-                fiszkiRecycler.setAdapter(new FlashcardAdapter(flashcardList));
+            public void onClick(View  view) {
+                String nazwa = flashcardsName.getText().toString();
+                String op1 = opis1.getText().toString();
+                String n1 = notatka1.getText().toString();
+                String op2 = opis2.getText().toString();
+                String n2 = notatka2.getText().toString();
+
+                Boolean checkInsertData = DB.insertFlashcardsData(nazwa, op1, n1, op2, n2);
+
+                if(checkInsertData==true)
+                    Toast.makeText(getContext(),"Dodano nowa fiszke", Toast.LENGTH_SHORT ).show();
+                else
+                    Toast.makeText(getContext(),"Dodanie nie powiodlo sie", Toast.LENGTH_SHORT ).show();
+
+                opis1.setText("");
+                notatka1.setText("");
+                opis2.setText("");
+                notatka2.setText("");
             }
         });
-
 
         saveFlashcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                EditText o1 = fiszkiRecycler.findViewById(R.id.opis);
-                EditText n1 = fiszkiRecycler.findViewById(R.id.notatka);
-                EditText o2 = fiszkiRecycler.findViewById(R.id.opis2);
-                EditText n2 = fiszkiRecycler.findViewById(R.id.notatka2);
-
-
-
-                for(int i = 0 ; i < flashcardList.size(); i++ )
-                {
-                    //lashcardList.get(i).setData(fiszkiRecycler.findViewById(R.id.opis).toString());
-
-
-                  flashcardList.get(i).setData(
-                                   o1.getText().toString(),
-                                   n1.getText().toString(),
-                                   o2.getText().toString(),
-                                   n2.getText().toString()
-                   );
-                    System.out.println(flashcardList.get(i).getOp1() + flashcardList.get(i).getN1() + flashcardList.get(i).getOp2() + flashcardList.get(i).getN2());
-                }
-
-
-
-                // System.out.println(flashcardList.get(0).getOp1());
-                //System.out.println(flashcardList.get(1).getOp1());
-
-
+                Navigation.findNavController(view).navigate(R.id.menuFiszki);
             }
         });
 

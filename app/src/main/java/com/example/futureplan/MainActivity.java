@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if(PreferenceUtils.getEmail(this) == null || PreferenceUtils.getEmail(this).equals("")){
-            startActivity(new Intent(MainActivity.this, LogActivity.class));
+            //startActivity(new Intent(MainActivity.this, LogActivity.class));
         }
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView imageProfile = header.findViewById(R.id.imageProfile);
         DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
 
-        /**Cursor cursor = dataBaseHelper.fetch();
+     /**   Cursor cursor = dataBaseHelper.fetch();
         cursor.moveToFirst();
 
         profileName.setText(cursor.getString(0));
