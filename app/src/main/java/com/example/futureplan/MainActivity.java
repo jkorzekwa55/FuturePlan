@@ -62,8 +62,10 @@ public class MainActivity extends AppCompatActivity {
         TextView profileEmail = header.findViewById(R.id.profileEmail);
         ImageView imageProfile = header.findViewById(R.id.imageProfile);
         DataBaseHelper dataBaseHelper = new DataBaseHelper(this);
-
+        
+      
         Cursor cursor = dataBaseHelper.fetch();
+
         cursor.moveToFirst();
 
         profileName.setText(cursor.getString(0));

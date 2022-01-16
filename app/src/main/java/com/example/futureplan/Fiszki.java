@@ -1,5 +1,6 @@
 package com.example.futureplan;
 
+import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -79,7 +81,8 @@ public class Fiszki extends Fragment {
         RecyclerView fiszkiRecycler = view.findViewById(R.id.fiszkiRecycler);
         ExtendedFloatingActionButton efab = view.findViewById(R.id.FABfiszki);
         NestedScrollView sv = view.findViewById(R.id.scrollView2);
-
+        FCDBHelper DB = new FCDBHelper(getContext());
+        Cursor dbCursor = DB.getFlashcardsData();
 
         fiszkiRecycler.setLayoutManager(
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
@@ -98,18 +101,26 @@ public class Fiszki extends Fragment {
             }
         });
 
+        List<CardItem> cardItems = new ArrayList<>(); // Lista obiektow CardItem.java
+        CardAdapter mAdapter = new CardAdapter(cardItems);
 
+        //Załadowanie elementów z bazy danych
+        while(dbCursor.moveToNext()){
+            String nazwa = dbCursor.getString(1);
+            boolean check2 = false;
 
-        // Loading images
-        List<CardItem> cardItems = new ArrayList<>();
-        cardItems.add(new CardItem("Niemiecki"));
-        cardItems.add(new CardItem("Historia"));
+            for(int i=0;i<cardItems.size();i++){
 
-        fiszkiRecycler.setAdapter(new CardAdapter(cardItems));
+                if(nazwa.equals(cardItems.get(i).getText())) {
+                    check2 = true;
+                }
+            }
 
-
-        Button fiszka = view.findViewById(R.id.buttonFiszki);
-
+            if(check2 == false){
+                cardItems.add(new CardItem(nazwa));
+                fiszkiRecycler.setAdapter(mAdapter);
+            }
+        }
 
 
         //Extended Floating Action Button on click to add new flashcards
@@ -120,8 +131,19 @@ public class Fiszki extends Fragment {
             }
         });
 
+        mAdapter.setOnItemClickListener(new CardAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Bundle bundle = new Bundle();
+                String nazwa = cardItems.get(position).getText();
+                bundle.putString("nazwa", nazwa);
+                Navigation.findNavController(view).navigate(R.id.action_menuFiszki_to_learnFlashcards, bundle);
+            }
+        });
 
 
         return view;
     }
+
+
 }

@@ -111,8 +111,10 @@ public class Profil extends Fragment {
 
         String mDrawableName = cursor.getString(6);
 
+
         int id = getContext().getResources().getIdentifier(mDrawableName, "drawable", getContext().getPackageName());
         profileImage.setImageResource(id);
+
 
         Button btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {

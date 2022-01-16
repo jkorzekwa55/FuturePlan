@@ -11,4 +11,8 @@ public class CardItem {
     public String getText() {
         return text;
     }
+
+
+
+
 }
