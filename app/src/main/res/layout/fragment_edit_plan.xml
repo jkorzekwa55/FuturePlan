@@ -35,45 +35,26 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/calendarInput"
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtinput"
-        app:startIconDrawable="@drawable/kalendarz_ikonka">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
-            android:text="Wybierz dzień" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <EditText
         android:id="@+id/timeEdTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/time_icon"
         android:drawablePadding="20px"
         android:hint="Czas rozpoczecia i zakonczenia"
         android:paddingLeft="35px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarInput" />
+        app:layout_constraintTop_toBottomOf="@+id/txtinput" />
 
     <EditText
         android:id="@+id/classEdText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/class_icon"
         android:drawablePadding="40px"
         android:hint="Sala"

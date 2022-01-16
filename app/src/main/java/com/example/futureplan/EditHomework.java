@@ -138,7 +138,7 @@ public class EditHomework extends Fragment {
                 }
                 date = dayString + "." + monthString;
 
-                dayEdTxt.setText(dayString + "." + monthString);
+                dayEdTxt.setText(date);
             }
         };
 

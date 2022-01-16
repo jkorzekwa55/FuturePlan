@@ -10,21 +10,23 @@
         android:id="@+id/simpleCalendarView"
         android:layout_width="fill_parent"
         android:layout_height="338dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        android:selectedWeekBackgroundColor="@color/blue1"
+        android:layout_marginEnd="10dp"
+        android:dateTextAppearance="@style/CalenderViewDateCustomText"
         android:focusedMonthDateColor="@color/blue1"
+        android:selectedWeekBackgroundColor="@color/blue1"
+        android:theme="@style/CalenderViewCustom"
+        android:weekDayTextAppearance="@style/CalenderViewDateCustomText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:theme="@style/CalenderViewCustom"
-        android:dateTextAppearance="@style/CalenderViewDateCustomText"
-        android:weekDayTextAppearance="@style/CalenderViewDateCustomText"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="84dp"
         android:backgroundTint="@color/blue1"
         android:clickable="true"
         android:focusable="true"
@@ -37,24 +39,23 @@
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
         android:text="Text"
-        android:visibility="invisible"
-        android:textSize="50px"
         android:textColor="@color/black"
+        android:textSize="50px"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simpleCalendarView" />
 
     <ListView
         android:id="@+id/listViewCalendar"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/date" />
 
@@ -62,27 +63,23 @@
         android:id="@+id/listViewTests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50px"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50px"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listViewCalendar"
-        />
+        app:layout_constraintTop_toBottomOf="@id/listViewCalendar" />
 
     <ListView
         android:id="@+id/listViewHomework"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50px"
         android:divider="@null"
         android:dividerHeight="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50px"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/listViewTests"
-        />
+        app:layout_constraintTop_toBottomOf="@id/listViewTests" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

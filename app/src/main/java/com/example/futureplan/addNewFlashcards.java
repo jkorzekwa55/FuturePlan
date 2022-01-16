@@ -99,6 +99,8 @@ public class addNewFlashcards extends Fragment {
                 EditText o2 = fiszkiRecycler.findViewById(R.id.opis2);
                 EditText n2 = fiszkiRecycler.findViewById(R.id.notatka2);
 
+                
+
 
 
                 for(int i = 0 ; i < flashcardList.size(); i++ )

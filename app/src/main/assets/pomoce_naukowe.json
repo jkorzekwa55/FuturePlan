@@ -1,0 +1,136 @@
+[
+    {
+        "name": "Jezyk polski",
+        "paragraphs": [
+            "I.\tCzęści mowy i ich odmiany",
+            "II.\tCZĘŚCI ZDANIA",
+            "III.\tWYPOWIEDZENIA",
+            "IV.\tFRAZEOLOGIA",
+            "V.\tPODSTAWOWE ŚRODKI STYLISTYCZNE",
+            "VI.\tPAN TADEUSZ",
+            "VII.\tDZIADY",
+            "VIII.\tLALKA",
+            "IX.\tMITOLOGIA",
+            "X.\tROMEO I JULIA",
+            "XI.\tMAKBET",
+            "XII.\tSKĄPIEC",
+            "XIII.\tBALLADYNA",
+            "XIV.\tBIBLIA"
+        ]
+    },
+    {
+        "name": "Język angielski",
+        "paragraphs": [
+            "I.\tPRESENT COUNTINOUS",
+            "II.\tPRESENT SIMPLE",
+            "III.\tPRESENT PERFECT",
+            "IV.\tPRESENT PERFECT COUNTINOUS",
+            "V.\tFUTURE SIMPLE",
+            "VI.\tFUTURE COUNTINOUS",
+            "VII.\tFUTURE PERFECT’",
+            "VIII.\tPAST SIMPLE",
+            "IX.\tPAST COUNTINOUS",
+            "X.\tPAST PERFECT"
+        ]
+    },
+    {
+        "name": "Język niemiecki",
+        "paragraphs": [
+            "I.\tCZASOWNIKI NIEREGULARNE",
+            "II.\tCZASOWNIKI MODALNE",
+            "III.\tCZAS PERFECT",
+            "IV.\tFURTUR I",
+            "V.\tODMIANA CZASOWNIKÓW",
+            "VI.\tTRYB ROZKAZUJĄCY",
+            "VI.\tTRYB ROZKAZUJĄCY"
+        ]
+    },
+    {
+        "name": "Matematyka",
+        "paragraphs": [
+            "I.\tWARTOŚĆ BEZWZGLĘDNA LICZBY",
+            "II.\tPOTĘGI I PIERWIASTKI",
+            "III.\tLOGARYTMY",
+            "IV.\tSILNIA. WSPÓŁCZYNNIK DWUMIANOWY",
+            "V.\tWZÓR DWUMIANOWY NEWTONA",
+            "VI.\tWZORY SKRÓCONEGO MNOŻENIA",
+            "VII.\tCIĄGI",
+            "VIII.\tFUNKCJA KWADRATOWA",
+            "IX.\tGEOMETRIA ANALITYCZNA",
+            "X.\tPLANIMETRIA",
+            "XI.\tSTEREOMETRIA",
+            "XII.\tTRYGONOMETRIA",
+            "XIII.\tKOMBINATORYKA",
+            "XIV.\tRACHUNEK PRAWDOPODOBIEŃSTWA",
+            "XV.\tPARAMETRY DANYCH STATYSTYCZNYCH",
+            "XVI.\tGRANICA CIĄGU",
+            "XVII.\tPOCHODNA FUNKCJI",
+            "XVIII.\tTABLICA WARTOŚCI TRYGONOMETRYCZNYCH"
+        ]
+    },
+    {
+        "name": "Fizyka",
+        "paragraphs": [
+            "I.\tELEKTRYCZNOŚĆ I MAGNETZYM",
+            "II.\tFIZYKA KWANTOWA",
+            "III.\tFIZYKA STATYCZNA",
+            "IV.\tGRAWITACJA I WSZECHŚWIAT",
+            "V.\tTEORIA WZGLĘDNOŚCI",
+            "VI.\tMATERIAŁY",
+            "VII.\tMECHANIKA",
+            "VIII.\tSTRUKTURA MATERII",
+            "IX.\tŚWIATŁO",
+            "X.\tTERMODYNAMIKA"
+
+        ]
+    },
+    {
+        "name": "Chemia",
+        "paragraphs": [
+            "I.\tSOLE",
+            "II.\tSKAŁY WAPIENNE",
+            "III.\tTLENEK KRZEMU",
+            "IV.\tMETALE",
+            "V.\tSTOPY METALI",
+            "VI.\tALKENY I ALKINY",
+            "VII.\tMYDŁA",
+            "VIII.\tTŁUSZCZE",
+            "IX.\tBIAŁKA",
+            "X.\tCUKRY I ICH PODZIAŁ",
+            "XI.\tWARTOŚCIOWOŚĆ"
+
+        ]
+    },
+    {
+        "name": "Biologia",
+        "paragraphs": [
+            "I.\tANATOMIA",
+            "II.\tSSAKI",
+            "III.\tBEZKRĘGOWCE",
+            "IV.\tUMASZCZENIA",
+            "V.\tMIKROBIOLOGIA",
+            "VI.\tGRZYBY",
+            "VII.\tEWOLUCJA BIOLOGICZNA",
+            "VIII.\tORNITOLOGIA",
+            "IX.\tKRYNOLOGIA",
+            "X.\tTAKSONOMIA"
+
+        ]
+    },
+    {
+        "name": "Geografia",
+        "paragraphs": [
+            "I.\tOBRAZ ZIEMII",
+            "II.\tZIEMIA WE WSZECHŚWIECIE",
+            "III.\tATMOSFERA",
+            "IV.\tHYDROSFERA",
+            "V.\tLITOSFERA",
+            "VI.\tPRZEMYSŁ",
+            "VII.\tLUDNOŚĆ I URBANIZACJA POLSKI",
+            "VIII.\tGOSPODARKA POLSKI",
+            "IX.\tWPŁYW CZŁOWIEKA NA ŚRODOWISKO",
+            "X.\tZMIANY NA MAPIE POLITYCZNEJ"
+
+        ]
+    }
+]
