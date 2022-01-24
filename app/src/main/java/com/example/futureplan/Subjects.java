@@ -4,7 +4,8 @@ import java.util.List;
 
 public class Subjects {
     String name;
-    List<String> paragraphs;
+    List<TekstPomoceNaukowe> paragraphs;
+
 
     public String getName() {
         return name;
@@ -14,11 +15,11 @@ public class Subjects {
         this.name = name;
     }
 
-    public List<String> getParagraphs() {
+    public List<TekstPomoceNaukowe> getParagraphs() {
         return paragraphs;
     }
 
-    public void setParagraphs(List<String> paragraphs) {
+    public void setParagraphs(List<TekstPomoceNaukowe> paragraphs) {
         this.paragraphs = paragraphs;
     }
 

@@ -22,5 +22,17 @@
         <action
             android:id="@+id/action_pomoceNaukoweRozdzialy_to_gridviewPomoce"
             app:destination="@id/gridviewPomoce" />
+        <action
+            android:id="@+id/action_pomoceNaukoweRozdzialy_to_pomoceNaukoweTekst"
+            app:destination="@id/pomoceNaukoweTekst" />
+    </fragment>
+    <fragment
+        android:id="@+id/pomoceNaukoweTekst"
+        android:name="com.example.futureplan.PomoceNaukoweTekst"
+        android:label="fragment_pomoce_naukowe_tekst"
+        tools:layout="@layout/fragment_pomoce_naukowe_tekst" >
+        <action
+            android:id="@+id/action_pomoceNaukoweTekst_to_pomoceNaukoweRozdzialy"
+            app:destination="@id/pomoceNaukoweRozdzialy" />
     </fragment>
 </navigation>

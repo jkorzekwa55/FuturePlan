@@ -80,7 +80,7 @@ public class GridviewPomoce extends Fragment {
         Gson gson = new Gson();
         Type listSubjectsType = new TypeToken<List<Subjects>>() { }.getType();
 
-        String items[] = {"1", "2", "3", "4", "5", "6", "7", "8"};
+      String items[] = {"1", "2", "3", "4", "5", "6", "7", "8"};
         List<Subjects> subject = gson.fromJson(jsonFileString, listSubjectsType);
 
 
@@ -97,20 +97,17 @@ public class GridviewPomoce extends Fragment {
         gridView.setAdapter(adapter);
 
 
+
+
     gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            //System.out.println(items[i]);
-            //int numberOfParagraphs = subject.get(i).getParagraphs().size();
-
-            //for(int j=0; j<numberOfParagraphs;j++){
-            //    System.out.println(subject.get(i).getParagraphs().get(j));
-            //}
-
             PreferenceUtils.saveSubjectID(i,getContext());
             Navigation.findNavController(view).navigate(R.id.action_gridviewPomoce_to_pomoceNaukoweRozdzialy);
         }
     });
+
+
 
 
 

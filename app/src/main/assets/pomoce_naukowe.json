@@ -2,135 +2,403 @@
     {
         "name": "Jezyk polski",
         "paragraphs": [
-            "I.\tCzęści mowy i ich odmiany",
-            "II.\tCZĘŚCI ZDANIA",
-            "III.\tWYPOWIEDZENIA",
-            "IV.\tFRAZEOLOGIA",
-            "V.\tPODSTAWOWE ŚRODKI STYLISTYCZNE",
-            "VI.\tPAN TADEUSZ",
-            "VII.\tDZIADY",
-            "VIII.\tLALKA",
-            "IX.\tMITOLOGIA",
-            "X.\tROMEO I JULIA",
-            "XI.\tMAKBET",
-            "XII.\tSKĄPIEC",
-            "XIII.\tBALLADYNA",
-            "XIV.\tBIBLIA"
+            {
+                "nameOfParagraph": "I.\tCZEŚCI MOWY I ICH ODMIANY",
+                "text": "•\tRZECZOWNIK - część mowy, która obejmuje wyrazy stanowiące nazwy określonych przedmiotów, osób zjawisk i pojęć abstrakcyjnych. Rzeczowniki odmieniają się rzez liczby i przypadki (deklinacja):\n                                            l.poj.                             l.mn.\nM. (kto? co?)                    dom                              domy\nD. (kogo? czego?)            domu                            domów\nC. (komu? czemu?)         domowi                        domom\nB. (kogo? co?)                  dom                              domy\nN. (z kim? z czym?)          z domem                     z domami\nMs.(o kim? o czym?)       o domie                       o domach\nW. (o!)                               domie!                         o domy!\nRzeczowniki posiadają też określony rodzaj: męski (ten dom), żeński (ta lampa) i nijaki (to krzesło).\n\n•\tCZASOWNIK - część mowy, która obejmuje wyrazy nazywające określone czynności lub stany. Czasowniki możemy odmieniać przez liczby i osoby (koniugacja):\n           l.poj.                                          l.mn.\n1. (ja) czytam                           1. (my) czytamy\n2. (ty) czytasz                           2. (wy) czytacie\n3. (on, ona, ono) czyta            3. (oni, one) czytają\nCzasowniki mogą występować w trzech różnych czasach:\n- przeszłym: bawił się\n- teraźniejszym: bawi się\n- przyszłym: będzie się bawił.\nMogą występować w stronie czynnej ( Mama myje Anię.); biernej (Ania jest myta przez mamę.) i zwrotnej (Ania myje się.).\nCzasowniki mogą też występować w trzech różnych trybach:\n- oznajmującym: Arek siedzi;\n- pytającym: Czy on siedzi?;\n- rozkazującym: siadaj!\nCzasownik może występować w aspekcie dokonanym (napisał) i niedokonanym (pisze).\n•\tPRZYMIOTNIK - cześć mowy będąca najczęściej dookreśleniem rzeczownika. Odpowiada na pytania: jaki?, jaka?, jakie? Tak jak rzeczownik odmienia się przez liczby i przypadki:\nl.poj. l.mn.\nM. (kto? co?)                   stary (dom)                         stare (domy)\nD. (kogo? czego?)            starego (domu)                 starych (domów)\nC. (komu? czemu?)         staremu (domowi)            starym (domom)\nB. (kogo? co?)                  stary (dom)                        stare (domy)\nN. (z kim? z czym?)         starym (domem)               starymi (domami)\nMs.(o kim? o czym?)      starym (domie)                  starych (domach)\nW. (o!)                              stary (domie)!                    stare (domy)!\nPrzymiotniki odmieniają się przez rodzaje i ulegają stopniowaniu:\nStopniowanie regularne: ładny - ładniejszy - najładniejszy.\nStopniowanie nieregularne: zły - gorszy - najgorszy.\nStopniowanie opisowe: chory - bardziej chory - najbardziej chory.\n\n•\tPRZYSŁÓWEK - część mowy najczęściej określająca czasownik, czasem przymiotnik lub inny przysłówek. Odpowiada na pytania: jak?, gdzie?, kiedy? Przysłówek jest nieodmienną częścią mowy, ale ulegają stopniowaniu:\nŁadnie - ładniej - najładniej.\nŹle - gorzej - najgorzej.\n•\tLICZEBNIK - określa liczebność lub kolejność. Odmienia się przez przypadki i rodzaje, ale nie odmienia się przez liczby.\n"
+            },
+            {
+                "nameOfParagraph": "II.\tCZĘŚCI ZDANIA",
+                "text": "•\tRZECZOWNIK - część mowy, która obejmuje wyrazy stanowiące nazwy określonych przedmiotów, osób zjawisk i pojęć abstrakcyjnych. Rzeczowniki odmieniają się rzez liczby i przypadki (deklinacja):\n                                            l.poj.                             l.mn.\nM. (kto? co?)                    dom                              domy\nD. (kogo? czego?)            domu                            domów\nC. (komu? czemu?)         domowi                        domom\nB. (kogo? co?)                  dom                              domy\nN. (z kim? z czym?)          z domem                     z domami\nMs.(o kim? o czym?)       o domie                       o domach\nW. (o!)                               domie!                         o domy!\nRzeczowniki posiadają też określony rodzaj: męski (ten dom), żeński (ta lampa) i nijaki (to krzesło).\n\n•\tCZASOWNIK - część mowy, która obejmuje wyrazy nazywające określone czynności lub stany. Czasowniki możemy odmieniać przez liczby i osoby (koniugacja):\n           l.poj.                                          l.mn.\n1. (ja) czytam                           1. (my) czytamy\n2. (ty) czytasz                           2. (wy) czytacie\n3. (on, ona, ono) czyta            3. (oni, one) czytają\nCzasowniki mogą występować w trzech różnych czasach:\n- przeszłym: bawił się\n- teraźniejszym: bawi się\n- przyszłym: będzie się bawił.\nMogą występować w stronie czynnej ( Mama myje Anię.); biernej (Ania jest myta przez mamę.) i zwrotnej (Ania myje się.).\nCzasowniki mogą też występować w trzech różnych trybach:\n- oznajmującym: Arek siedzi;\n- pytającym: Czy on siedzi?;\n- rozkazującym: siadaj!\nCzasownik może występować w aspekcie dokonanym (napisał) i niedokonanym (pisze).\n•\tPRZYMIOTNIK - cześć mowy będąca najczęściej dookreśleniem rzeczownika. Odpowiada na pytania: jaki?, jaka?, jakie? Tak jak rzeczownik odmienia się przez liczby i przypadki:\nl.poj. l.mn.\nM. (kto? co?)                   stary (dom)                         stare (domy)\nD. (kogo? czego?)            starego (domu)                 starych (domów)\nC. (komu? czemu?)         staremu (domowi)            starym (domom)\nB. (kogo? co?)                  stary (dom)                        stare (domy)\nN. (z kim? z czym?)         starym (domem)               starymi (domami)\nMs.(o kim? o czym?)      starym (domie)                  starych (domach)\nW. (o!)                              stary (domie)!                    stare (domy)!\nPrzymiotniki odmieniają się przez rodzaje i ulegają stopniowaniu:\nStopniowanie regularne: ładny - ładniejszy - najładniejszy.\nStopniowanie nieregularne: zły - gorszy - najgorszy.\nStopniowanie opisowe: chory - bardziej chory - najbardziej chory.\n\n•\tPRZYSŁÓWEK - część mowy najczęściej określająca czasownik, czasem przymiotnik lub inny przysłówek. Odpowiada na pytania: jak?, gdzie?, kiedy? Przysłówek jest nieodmienną częścią mowy, ale ulegają stopniowaniu:\nŁadnie - ładniej - najładniej.\nŹle - gorzej - najgorzej.\n•\tLICZEBNIK - określa liczebność lub kolejność. Odmienia się przez przypadki i rodzaje, ale nie odmienia się przez liczby.\n"
+            },
+            {
+                "nameOfParagraph": "III.\tWYPOWIEDZENIA",
+                "text": "ZDANIE - to zespół wyrazów połączonych ze sobą w logiczna całość. Ośrodkiem, wokół którego zbierają się wyrazy jest orzeczenie - czyli osobowa forma czasownika.\nRÓWNOWAŻNIK ZDANIA - wypowiedzenie posiadające określony sens, ale nie zawierające osobowej formy czasownika.\nW języku polskim zdania możemy podzielić na pojedyncze (zawierające tylko jedno orzeczenie) lub złożone ( zawierające przynajmniej dwa orzeczenia). Dodatkowo zdania złożone możemy podzielić na:\n1)\tzdania złożone współrzędnie:\n\nŁączne - połączone za pomocą spójników i, a, oraz, tudzież, ani, ni.\n___ …..___\n\nRozłączne - połączone za pomocą spójników lub, albo, czy, bądź.\n___<…..>___\n\nPrzeciwstawne - połączone za pomocą spójników ale, lecz, natomiast.\n___>…..<___\n\nWynikowe - połączone za pomocą spójników więc, toteż, dlatego.\n___>…..>___\n2)\tzdania złożone podrzędnie:\n\nZ podrzędnym dopełnieniowym - pełni taka funkcje jak dopełnienie. Pytamy o nie za pomocą pytań przypadków zależnych.\nZ podrzędnym okolicznikowym - pełni taka funkcję jak określony okolicznik. Zdanie podrzędne okolicznikowe może być: miejscowe, sposobowe, czasowe itp. Pytamy o nie stosując pytania, na które odpowiada określony okolicznik np.: kiedy?, gdzie?, w jaki sposób?.\nZ podrzędnym przydawkowym - pełni taka funkcje jak przydawka, zazwyczaj jest wprowadzone za pomocą zaimka który. Odpowiada na pytania przydawki np.: jaki?, który?, czyj?, czego?, z czego?\nZ podrzędnym podmiotowym - nie zastępuje podmiotu, ale rozwija jego treść. Możemy o nie zapytać stosując pytania: kto?, co?.\nZ podrzędnym orzecznikowym. - stanowi uzupełnienie do orzecznika. Odpowiada na pytania: jaki jest?, czym jest?\n"
+            },
+            {
+                "nameOfParagraph": "IV.\tFRAZEOLOGIA",
+                "text": "•\tZwiązek frazeologiczny - takie połączenie wyrazów, w którym poszczególne słowa tracą swoje pierwotne znaczenie i tworzą nowa całość semantyczną, której poprawne odczytanie wymaga od odbiorcy znajomości określonego kodu kulturowego bądź religijnego.\n•\tZdrobnienia - wyraz o charakterze zmniejszającym, utworzony za pomocą formantu zmniejszającego np.: domek, kwiatuszek.\n•\tZgrubienia - wyraz o charakterze zgrubiałym, utworzony za pomocą formantu zgrubiającego np.: brzuszysko, kocisko.\n•\tSynonimy - wyrazy bliskoznaczne np.: kłótnia, sprzeczka, zwada.\n•\tAntonimy - wyrazy o znaczeniu przeciwstawnym np.: dobry - zły, gorzki - słodki.\n•\tHomonimy - wyrazy tak samo brzmiące, jednak oznaczające co innego np.: zamek (pałac), zamek (do spodni).\n\n"
+            },
+            {
+                "nameOfParagraph": "V.\tPODSTAWOWE ŚRODKI STYLISTYCZNE",
+                "text": "•\tMetafora - przenośnia, takie połączenie wyrazów, które nadaje im nowy wymiar.\n•\tEpitet - Dookreślenie rzeczownika\n•\tAnimizacja - nadanie przedmiotom martwym i zjawiskom cech właściwych zwierzętom.\n•\tPersonifikacja - nadanie przedmiotom martwym, zwierzętom i określonym stanom, cech właściwych jedynie człowiekowi.\n•\tPorównanie - zestawienie dwóch różnych elementów, przy wyraźnym ukazaniu jakiejś jednej cechy wspólnej dla nich obu.\n"
+            },
+            {
+                "nameOfParagraph": "VI.\tPAN TADEUSZ",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VII.\tDZIADY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VIII.\tLALKA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "IX.\tMITOLOGIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "X.\tROMEO I JULIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XI.\tMAKBET",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XII.\tSKĄPIEC",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XIII.\tBALLADYNA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XIV.\tBIBLIA",
+                "text": ""
+            }
         ]
     },
     {
         "name": "Język angielski",
         "paragraphs": [
-            "I.\tPRESENT COUNTINOUS",
-            "II.\tPRESENT SIMPLE",
-            "III.\tPRESENT PERFECT",
-            "IV.\tPRESENT PERFECT COUNTINOUS",
-            "V.\tFUTURE SIMPLE",
-            "VI.\tFUTURE COUNTINOUS",
-            "VII.\tFUTURE PERFECT’",
-            "VIII.\tPAST SIMPLE",
-            "IX.\tPAST COUNTINOUS",
-            "X.\tPAST PERFECT"
+            {
+                "nameOfParagraph": "I.\tPRESENT COUNTINOUS",
+                "text": "Czas Present Continuous używany jest do opisywania czynności, które dzieją się w tej chwili.  Składa się on z następujących elementów:\npodmiot\t+\tto be (am/is/are)\t+\tczasownik z końcówką -ing\nliczba pojedyncza\t\n1 os.\tplay I am\nwalking\ndoing\ngoing\nhaving\nworking\n...\n2 os.\tplay you are\n\n3 os.\tplay he is\nplay she is\nplay it is\n\nliczba mnoga\t\n1 os.\tplay we are\neating\nwriting\ntalking\njumping\nwaiting\n...\n2 os.\tplay you are\n\n3 os.\tplay they are\t\nOdmiana to be jest prosta – podajemy ją niżej, opisujemy także jak utworzyć czasownik z końcówką -ing.\nRozpiszmy przykłady na poszczególne osoby:\n\n\n\n\n\n\n\n\nOto przykłady:\ns01Tom is writing a letter.\nTomek pisze list. (w tej chwili)\ns02We are waiting for a taxi.\tCzekamy na taksówkę.\ns03I am getting ready.\nPrzygotowuję się.\nNajpierw mamy osobę, która wykonuje czynność Tom, następnie trzecią formę czasownika być is. Następnie dodajemy do czasownika głównego pisać write końcówkę -ing i dopełnienie - w tym wypadku słowo list a letter. Pierwsze zdanie w Present Continuous gotowe!\nPrzypominamy jeszcze formy czasownika to be dla wszystkich osób:\n\tliczba pojedyncza\t\tliczba mnoga\n1 osoba\tplayI am\n\tplaywe are\n2 osoba\tplayyou are\n\tplayyou are\n3 osoba\tplayhe is\nplayshe is\nplayit is\n\tplaythey are\nforma -ing czasownika\nKażdy czas continuous będzie wymagał użycia czasownika w formie gerund (-ing). Tworzenie właściwej formy czasownika głównego jest bardzo proste, zasadą jest, że do podstawowej formy dodajemy końcówkę -ing, oto kilka przykładów:\nplaywrite\t»\tplaywriting\npisać\nplayread\n»\tplayreading\tczytać\nplaysit\n»\tplaysitting\nsiedzieć\nplaylook\n»\tplaylooking\npatrzeć\nplaydo\n»\tplaydoing\nrobić\nplaytake\n»\tplaytaking\nzabierać\nplayeat\n»\tplayeating\njeść\nZwróćmy uwagę, że niektóre czasowniki po dodaniu końcówki wyglądają nieco inaczej. Zapamiętajmy zasady pisowni czasowników z końcówką -ing:\n•\tczasowniki zakończone na -e, -e na końcu czasownika znika:\n-e\t»\t-ing\nplaymake\n»\tplaymaking\nplaytake\n»\tplaytaking\nplayhave\n»\thaving\nplaywrite\n»\tplaywriting\nplaydance\t»\tplaydancing\n\n•\tw czasowniku jednosylabowym, gdzie na końcu jest spółgłoska + samogłoska + spółgłoska podwajamy ostatnią spółgłoskę *, podwajanie nie dotyczy spółgłosek w i x.\nplayswim\t»\tplayswimming\nplayrun\n»\tplayrunning\nplaysit\n»\tplaysitting\nplaystop\n»\tstopping\nplayget\n»\tgetting\n\n•\tw czasownikach dwusylabowych, gdzie na końcu jest spółgłoska + samogłoska + spółgłoska, a akcent pada na drugą sylabę, podwajamy ostatnią spółgłoskę\n\n** Dla porównania: czasownik happen też ma dwie sylaby, a na końcu spółgłoskę + samogłoskę + spółgłoskę (p + e + n ), ale ponieważ akcentujemy w nim pierwszą sylabę, nie podwoimy ostatniej spółgłoski przed dodaniem końcówki -ing. W tym przypadku otrzymujemy formę happening.\nplayrefer\n»\tplayreferring\nplaybegin\n»\tplaybeginning\nplayforget\t»\tforgetting\n\n•\tczasowniki kończące się na -ie zmieniają pisownię z -ie na -y:\nplaydie\t»\tplaydying\nplaylie\n»\tlying\nplaytie\n»\ttying\nPo takiej dawce wiedzy tworzenie zdań w Present Continuous nie powinno sprawiać nam żadnej trudności.\nOto więcej przykładów zdań w tym czasie:\ns04You are reading a book.\nTy czytasz książkę.\ns05Mary is having breakfast.\nMary je śniadanie.\ns06They are running.\nOni biegną.\ns07I am taking my bag.\nZabieram swoją torbę.\ns08We are waiting for my uncle.\tCzekamy na mojego wujka.\ns09He is looking at the stars.\nOn patrzy w gwiazdy.\ns10We are doing our homework.\tRobimy (odrabiamy) zadanie domowe.\n"
+            },
+            {
+                "nameOfParagraph": "II.\tPRESENT SIMPLE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "III.\tPRESENT PERFECT",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "IV.\tPRESENT PERFECT COUNTINOUS",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "V.\tFUTURE SIMPLE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VI.\tFUTURE COUNTINOUS",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VII.\tFUTURE PERFECT",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VIII.\tPAST SIMPLE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "IX.\tPAST COUNTINOUS",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "X.\tPAST PERFECT",
+                "text": ""
+            }
         ]
     },
     {
         "name": "Język niemiecki",
         "paragraphs": [
-            "I.\tCZASOWNIKI NIEREGULARNE",
-            "II.\tCZASOWNIKI MODALNE",
-            "III.\tCZAS PERFECT",
-            "IV.\tFURTUR I",
-            "V.\tODMIANA CZASOWNIKÓW",
-            "VI.\tTRYB ROZKAZUJĄCY",
-            "VI.\tTRYB ROZKAZUJĄCY"
+            {
+                "nameOfParagraph": "I.\tCZASOWNIKI NIEREGULARNE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "II.\tCZASOWNIKI MODALNE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "III.\tCZAS PERFECT",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "IV.\tFURTUR I",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "V.\tODMIANA CZASOWNIKÓW",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VI.\tTRYB ROZKAZUJĄCY",
+                "text": ""
+            }
         ]
     },
     {
-        "name": "Matematyka",
+        "name" : "Matematyka",
         "paragraphs": [
-            "I.\tWARTOŚĆ BEZWZGLĘDNA LICZBY",
-            "II.\tPOTĘGI I PIERWIASTKI",
-            "III.\tLOGARYTMY",
-            "IV.\tSILNIA. WSPÓŁCZYNNIK DWUMIANOWY",
-            "V.\tWZÓR DWUMIANOWY NEWTONA",
-            "VI.\tWZORY SKRÓCONEGO MNOŻENIA",
-            "VII.\tCIĄGI",
-            "VIII.\tFUNKCJA KWADRATOWA",
-            "IX.\tGEOMETRIA ANALITYCZNA",
-            "X.\tPLANIMETRIA",
-            "XI.\tSTEREOMETRIA",
-            "XII.\tTRYGONOMETRIA",
-            "XIII.\tKOMBINATORYKA",
-            "XIV.\tRACHUNEK PRAWDOPODOBIEŃSTWA",
-            "XV.\tPARAMETRY DANYCH STATYSTYCZNYCH",
-            "XVI.\tGRANICA CIĄGU",
-            "XVII.\tPOCHODNA FUNKCJI",
-            "XVIII.\tTABLICA WARTOŚCI TRYGONOMETRYCZNYCH"
+            {
+                "nameOfParagraph": "I.\tWARTOŚĆ BEZWZGLĘDNA LICZBY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "II.\tPOTĘGI I PIERWIASTKI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "III.\tLOGARYTMY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "IV.\tSILNIA. WSPÓŁCZYNNIK DWUMIANOWY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "V.\tWZÓR DWUMIANOWY NEWTONA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VI.\tWZORY SKRÓCONEGO MNOŻENIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VII.\tCIĄGI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "VIII.\tFUNKCJA KWADRATOWA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "IX.\tGEOMETRIA ANALITYCZNA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "X.\tPLANIMETRIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XI.\tSTEREOMETRIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XII.\tTRYGONOMETRIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XIII.\tKOMBINATORYKA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XIV.\tRACHUNEK PRAWDOPODOBIEŃSTWA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XV.\tPARAMETRY DANYCH STATYSTYCZNYCH",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XVI.\tGRANICA CIĄGU",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XVII.\tPOCHODNA FUNKCJI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph": "XVIII.\tTABLICA WARTOŚCI TRYGONOMETRYCZNYCH",
+                "text": ""
+            }
         ]
     },
     {
         "name": "Fizyka",
         "paragraphs": [
-            "I.\tELEKTRYCZNOŚĆ I MAGNETZYM",
-            "II.\tFIZYKA KWANTOWA",
-            "III.\tFIZYKA STATYCZNA",
-            "IV.\tGRAWITACJA I WSZECHŚWIAT",
-            "V.\tTEORIA WZGLĘDNOŚCI",
-            "VI.\tMATERIAŁY",
-            "VII.\tMECHANIKA",
-            "VIII.\tSTRUKTURA MATERII",
-            "IX.\tŚWIATŁO",
-            "X.\tTERMODYNAMIKA"
+            {
+                "nameOfParagraph":"I.\tELEKTRYCZNOŚĆ I MAGNETZYM",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"II.\tFIZYKA KWANTOWA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"III.\tFIZYKA STATYCZNA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IV.\tGRAWITACJA I WSZECHŚWIAT",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"V.\tTEORIA WZGLĘDNOŚCI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VI.\tMATERIAŁY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VII.\tMECHANIKA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VIII.\tSTRUKTURA MATERII",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IX.\tŚWIATŁO",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"X.\tTERMODYNAMIKA",
+                "text": ""
+            }
 
         ]
     },
     {
         "name": "Chemia",
         "paragraphs": [
-            "I.\tSOLE",
-            "II.\tSKAŁY WAPIENNE",
-            "III.\tTLENEK KRZEMU",
-            "IV.\tMETALE",
-            "V.\tSTOPY METALI",
-            "VI.\tALKENY I ALKINY",
-            "VII.\tMYDŁA",
-            "VIII.\tTŁUSZCZE",
-            "IX.\tBIAŁKA",
-            "X.\tCUKRY I ICH PODZIAŁ",
-            "XI.\tWARTOŚCIOWOŚĆ"
+            {
+                "nameOfParagraph":"I.\tSOLE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"II.\tSKAŁY WAPIENNE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"III.\tTLENEK KRZEMU",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IV.\tMETALE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"V.\tSTOPY METALI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VI.\tALKENY I ALKINY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VII.\tMYDŁA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VIII.\tTŁUSZCZE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IX.\tBIAŁKA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"X.\tCUKRY I ICH PODZIAŁ",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"XI.\tWARTOŚCIOWOŚĆ",
+                "text": ""
+            }
 
         ]
     },
     {
         "name": "Biologia",
         "paragraphs": [
-            "I.\tANATOMIA",
-            "II.\tSSAKI",
-            "III.\tBEZKRĘGOWCE",
-            "IV.\tUMASZCZENIA",
-            "V.\tMIKROBIOLOGIA",
-            "VI.\tGRZYBY",
-            "VII.\tEWOLUCJA BIOLOGICZNA",
-            "VIII.\tORNITOLOGIA",
-            "IX.\tKRYNOLOGIA",
-            "X.\tTAKSONOMIA"
+            {
+                "nameOfParagraph":"I.\tANATOMIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"II.\tSSAKI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"III.\tBEZKRĘGOWCE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IV.\tUMASZCZENIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"V.\tMIKROBIOLOGIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VI.\tGRZYBY",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VII.\tEWOLUCJA BIOLOGICZNA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VIII.\tORNITOLOGIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IX.\tKRYNOLOGIA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"X.\tTAKSONOMIA",
+                "text": ""
+            }
 
         ]
     },
     {
         "name": "Geografia",
         "paragraphs": [
-            "I.\tOBRAZ ZIEMII",
-            "II.\tZIEMIA WE WSZECHŚWIECIE",
-            "III.\tATMOSFERA",
-            "IV.\tHYDROSFERA",
-            "V.\tLITOSFERA",
-            "VI.\tPRZEMYSŁ",
-            "VII.\tLUDNOŚĆ I URBANIZACJA POLSKI",
-            "VIII.\tGOSPODARKA POLSKI",
-            "IX.\tWPŁYW CZŁOWIEKA NA ŚRODOWISKO",
-            "X.\tZMIANY NA MAPIE POLITYCZNEJ"
+            {
+                "nameOfParagraph":"I.\tOBRAZ ZIEMII",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"II.\tZIEMIA WE WSZECHŚWIECIE",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"III.\tATMOSFERA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IV.\tHYDROSFERA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"V.\tLITOSFERA",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VI.\tPRZEMYSŁ",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VII.\tLUDNOŚĆ I URBANIZACJA POLSKI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"VIII.\tGOSPODARKA POLSKI",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"IX.\tWPŁYW CZŁOWIEKA NA ŚRODOWISKO",
+                "text": ""
+            },
+            {
+                "nameOfParagraph":"X.\tZMIANY NA MAPIE POLITYCZNEJ",
+                "text": ""
+            }
 
         ]
     }
+
+
 ]

@@ -11,4 +11,5 @@ public class Constants {
     public static String KEY_DAY = "day";
     public static String KEY_SUBJECT = "subject";
     public static String KEY_ID_SUBJECT_POMOCE = "id_subject";
+    public static String KEY_ID_SUBJECT_POMOCE_TEXT = "id_subject_text";
 }
