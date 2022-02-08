@@ -3,11 +3,13 @@ package com.example.futureplan;
 import android.content.Context;
 import android.util.Log;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class MyJSON {
     static String fileName = "pomoce_naukowe.json";
@@ -23,7 +25,8 @@ public class MyJSON {
         }
     }
 
-    public static String getData(Context context) {
+
+    public static String getData(Context context, String fileName) {
         try {
             File f = new File(context.getFilesDir().getPath() + "/" + fileName);
             FileInputStream is = new FileInputStream(f);
@@ -38,10 +41,28 @@ public class MyJSON {
         }
     }
 
-    public static String getAssetJsonData(Context context) {
+    public static String getStringFromFile(String filePath) throws Exception {
+        File fl = new File(filePath);
+        FileInputStream fin = new FileInputStream(fl);
+        String ret = convertStreamToString(fin);
+        fin.close();
+        return ret;
+    }
+
+    public static String convertStreamToString(InputStream is) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            sb.append(line).append("\n");
+        }
+        return sb.toString();
+    }
+
+    public static String getAssetJsonData(Context context, String file) {
         String json = null;
         try {
-            InputStream is = context.getAssets().open("pomoce_naukowe.json");
+            InputStream is = context.getAssets().open(file);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -52,7 +73,7 @@ public class MyJSON {
             return null;
         }
 
-        Log.e("data", json);
+        //Log.e("data", json);
         return json;
 
     }

@@ -35,5 +35,9 @@
     <string name="haslo">Haslo</string>
     <string name="Email">Email</string>
     <string name="powHaslo">Powtorz haslo</string>
+    <string name="title">Tytul</string>
+    <string name="save">zapisz</string>
+    <string name="back">powrot</string>
+    <string name="add">dodaj</string>
 
 </resources>

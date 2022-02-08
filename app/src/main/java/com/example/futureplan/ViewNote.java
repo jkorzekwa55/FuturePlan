@@ -9,20 +9,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.google.android.material.textfield.TextInputLayout;
 
-import java.lang.reflect.Type;
-import java.util.List;
+import org.json.JSONArray;
+
+import java.io.File;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link PomoceNaukoweTekst#newInstance} factory method to
+ * Use the {@link ViewNote#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PomoceNaukoweTekst extends Fragment {
+public class ViewNote extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +33,7 @@ public class PomoceNaukoweTekst extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PomoceNaukoweTekst() {
+    public ViewNote() {
         // Required empty public constructor
     }
 
@@ -43,11 +43,11 @@ public class PomoceNaukoweTekst extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PomoceNaukoweTekst.
+     * @return A new instance of fragment ViewNote.
      */
     // TODO: Rename and change types and number of parameters
-    public static PomoceNaukoweTekst newInstance(String param1, String param2) {
-        PomoceNaukoweTekst fragment = new PomoceNaukoweTekst();
+    public static ViewNote newInstance(String param1, String param2) {
+        ViewNote fragment = new ViewNote();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,28 +67,22 @@ public class PomoceNaukoweTekst extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_pomoce_naukowe_tekst, container, false);
+        View view = inflater.inflate(R.layout.fragment_view_note, container, false);
 
-        TextView txtParagraph = view.findViewById(R.id.txtParagraph);
+        String note = PreferenceUtils.getNote(getContext());
+        String titleNote = PreferenceUtils.getTitleNote((getContext()));
+
+        TextInputLayout titleInputTxt = view.findViewById(R.id.title_text_input);
+        EditText editTextNote = view.findViewById(R.id.editTextNote);
+
+        titleInputTxt.getEditText().setText(titleNote);
+        editTextNote.setText(note);
 
         Button btnBack = view.findViewById(R.id.btnBack);
-
-        String jsonFileString = MyJSON.getAssetJsonData(getContext(), "pomoce_naukowe.json");
-        Gson gson = new Gson();
-        Type listSubjectsType = new TypeToken<List<Subjects>>() { }.getType();
-        List<Subjects> subject = gson.fromJson(jsonFileString, listSubjectsType);
-
-        int subject_id = PreferenceUtils.getSubjectID(getContext());
-        int subject_text = PreferenceUtils.getSubjectIDtext(getContext());
-
-        txtParagraph.setText(subject.get(subject_id).getParagraphs().get(subject_text).getText());
-
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_pomoceNaukoweTekst_to_pomoceNaukoweRozdzialy);
-
+                Navigation.findNavController(view).navigate(R.id.action_viewNote_to_notesList);
             }
         });
 

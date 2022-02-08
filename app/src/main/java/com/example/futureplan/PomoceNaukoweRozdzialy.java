@@ -81,7 +81,7 @@ public class PomoceNaukoweRozdzialy extends Fragment {
             }
         });
 
-        String jsonFileString = MyJSON.getAssetJsonData(getContext());
+        String jsonFileString = MyJSON.getAssetJsonData(getContext(), "pomoce_naukowe.json");
         Gson gson = new Gson();
         Type listSubjectsType = new TypeToken<List<Subjects>>() { }.getType();
         List<Subjects> subject = gson.fromJson(jsonFileString, listSubjectsType);
@@ -93,9 +93,8 @@ public class PomoceNaukoweRozdzialy extends Fragment {
 
         int subject_id = PreferenceUtils.getSubjectID(getContext());
         int numberOfParagraphs = subject.get(subject_id).getParagraphs().size();
-        //System.out.println(numberOfParagraphs);
+
         for(int j=0; j<numberOfParagraphs;j++){
-            //System.out.println(subject.get(subject_id).getParagraphs().get(j).getNameOfParagraph());
             items.add(subject.get(subject_id).getParagraphs().get(j).getNameOfParagraph());
         }
 
@@ -106,7 +105,7 @@ public class PomoceNaukoweRozdzialy extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                System.out.println(items.get(i));
+                //System.out.println(items.get(i));
                 PreferenceUtils.saveSubjectIDtext(i,getContext());
                 Navigation.findNavController(view).navigate(R.id.action_pomoceNaukoweRozdzialy_to_pomoceNaukoweTekst);
             }

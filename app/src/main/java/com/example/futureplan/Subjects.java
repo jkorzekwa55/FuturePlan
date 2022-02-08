@@ -19,10 +19,6 @@ public class Subjects {
         return paragraphs;
     }
 
-    public void setParagraphs(List<TekstPomoceNaukowe> paragraphs) {
-        this.paragraphs = paragraphs;
-    }
-
     @Override
     public String toString() {
         return "Subjects{" +

@@ -22,25 +22,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="84dp"
-        android:backgroundTint="@color/blue1"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/ic_plus"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
-
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
         android:text="Text"
         android:textColor="@color/black"
         android:textSize="50px"
@@ -49,22 +36,11 @@
         app:layout_constraintTop_toBottomOf="@+id/simpleCalendarView" />
 
     <ListView
-        android:id="@+id/listViewCalendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/date" />
-
-    <ListView
         android:id="@+id/listViewTests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50px"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
         android:divider="@null"
         android:dividerHeight="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,12 +50,23 @@
         android:id="@+id/listViewHomework"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50px"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
         android:divider="@null"
         android:dividerHeight="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/listViewTests" />
+
+    <ListView
+        android:id="@+id/listViewCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

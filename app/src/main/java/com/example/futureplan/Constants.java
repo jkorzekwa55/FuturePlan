@@ -12,4 +12,6 @@ public class Constants {
     public static String KEY_SUBJECT = "subject";
     public static String KEY_ID_SUBJECT_POMOCE = "id_subject";
     public static String KEY_ID_SUBJECT_POMOCE_TEXT = "id_subject_text";
+    public static String KEY_NOTE = "note";
+    public static String KEY_TITLE_NOTE = "id_title_note";
 }

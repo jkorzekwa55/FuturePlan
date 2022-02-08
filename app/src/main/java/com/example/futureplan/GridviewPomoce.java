@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -71,32 +72,25 @@ public class GridviewPomoce extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gridview_pomoce, container, false);
         GridView gridView = view.findViewById(R.id.gridView);
 
-        String jsonFileString = MyJSON.getAssetJsonData(getContext());
+        String jsonFileString = MyJSON.getAssetJsonData(getContext(), "pomoce_naukowe.json");
 
         Gson gson = new Gson();
         Type listSubjectsType = new TypeToken<List<Subjects>>() { }.getType();
 
-      String items[] = {"1", "2", "3", "4", "5", "6", "7", "8"};
+        String items[] = {"1", "2", "3", "4", "5", "6", "7", "8"};
+        int imageId[] = {R.drawable.polski, R.drawable.angielski, R.drawable.niemiecki, R.drawable.matematyka, R.drawable.fizyka, R.drawable.chemia, R.drawable.biologia, R.drawable.geografia};
         List<Subjects> subject = gson.fromJson(jsonFileString, listSubjectsType);
-
 
         for (int i = 0; i < subject.size(); i++) {
             items[i] = subject.get(i).getName();
         }
 
-
-        ArrayList<String> carL = new ArrayList<String>();
-        carL.addAll( Arrays.asList(items) );
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), R.layout.grid_layout, carL);
-
-        gridView.setAdapter(adapter);
-
-
+        CustomGrid adapter = new CustomGrid(getContext(), items, imageId);
+        GridView grid=(GridView)view.findViewById(R.id.gridView);
+        grid.setAdapter(adapter);
 
 
     gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -106,10 +100,6 @@ public class GridviewPomoce extends Fragment {
             Navigation.findNavController(view).navigate(R.id.action_gridviewPomoce_to_pomoceNaukoweRozdzialy);
         }
     });
-
-
-
-
 
         return view;
     }
