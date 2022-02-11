@@ -79,7 +79,6 @@ public class NotesList extends Fragment {
         View view = inflater.inflate(R.layout.fragment_notes_list, container, false);
 
         Button btnNewNote = view.findViewById(R.id.btnNewNote);
-
         btnNewNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,16 +91,10 @@ public class NotesList extends Fragment {
         Type listNotesType = new TypeToken<List<Notes>>() { }.getType();
         List<Notes> note = gson.fromJson(jsonFileString, listNotesType);
 
-        //ListView listView = view.findViewById(R.id.listViewNotes);
         GridView gridView = view.findViewById(R.id.gridViewNotes);
         ArrayList<HashMap<String,String>> list = new ArrayList<HashMap<String,String>>();
-        //ArrayList<HashMap<String,String>> list
 
         int numberOfNotes = note.size();
-
-        //for(int j=0; j<numberOfNotes;j++){
-        //    items.add(note.get(j).getTitle());
-        //}
 
         HashMap<String,String> item;
         for(int i=0;i<numberOfNotes;i++){
@@ -121,24 +114,12 @@ public class NotesList extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Navigation.findNavController(view).navigate(R.id.action_notesList_to_viewNote);
-                PreferenceUtils.saveNote(note.get(i).getNote(),getContext());
-                PreferenceUtils.saveTitleNote(note.get(i).getTitle(),getContext());
+                //PreferenceUtils.saveNote(note.get(i).getNote(),getContext());
+                //PreferenceUtils.saveTitleNote(note.get(i).getTitle(),getContext());
+                PreferenceUtils.saveNoteID(i,getContext());
             }
         });
 
-        /*
-        //ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_activated_1, items);
-        //listView.setAdapter(itemsAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Navigation.findNavController(view).navigate(R.id.action_notesList_to_viewNote);
-                PreferenceUtils.saveNote(note.get(i).getNote(),getContext());
-                PreferenceUtils.saveTitleNote(note.get(i).getTitle(),getContext());
-            }
-        });
-
-        */
 
         return view;
     }

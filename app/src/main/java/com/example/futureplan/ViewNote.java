@@ -12,10 +12,18 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,8 +77,15 @@ public class ViewNote extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_view_note, container, false);
 
-        String note = PreferenceUtils.getNote(getContext());
-        String titleNote = PreferenceUtils.getTitleNote((getContext()));
+        String jsonFileString = MyJSON.getData(getContext(), "notes.json");
+        Gson gson = new Gson();
+        Type listNotesType = new TypeToken<List<Notes>>() { }.getType();
+        List<Notes> notes = gson.fromJson(jsonFileString, listNotesType);
+
+        int note_id = PreferenceUtils.getNoteID(getContext());
+
+        String note = notes.get(note_id).getNote();
+        String titleNote = notes.get(note_id).getTitle();
 
         TextInputLayout titleInputTxt = view.findViewById(R.id.title_text_input);
         EditText editTextNote = view.findViewById(R.id.editTextNote);
@@ -86,8 +101,30 @@ public class ViewNote extends Fragment {
             }
         });
 
+        Button btnSave = view.findViewById(R.id.btnSave);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String titleNote = titleInputTxt.getEditText().getText().toString();
+                String note = editTextNote.getText().toString();
 
+                notes.get(note_id).setNote(note);
+                notes.get(note_id).setTitle(titleNote);
 
+                String jsonString = gson.toJson(notes,listNotesType);
+
+                try {
+                    File file = new File(getContext().getFilesDir(),"notes.json");
+                    FileWriter fileWriter = null;
+                    fileWriter = new FileWriter(file);
+                    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                    bufferedWriter.write(jsonString);
+                    bufferedWriter.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         return view;
     }
 }

@@ -79,6 +79,14 @@ public class addNewNote extends Fragment {
         EditText editTextNote = view.findViewById(R.id.editTextNote);
         Button btnAdd = view.findViewById(R.id.btnAdd);
 
+        Button btnBack = view.findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_addNewNote_to_notesList);
+            }
+        });
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

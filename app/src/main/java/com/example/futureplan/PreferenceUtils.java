@@ -38,27 +38,16 @@ public class PreferenceUtils {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         return prefs.getString(Constants.KEY_AVATAR,null);
     }
-    public static boolean saveNote(String note, Context ctx){
+    public static boolean saveNoteID(int noteID, Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         SharedPreferences.Editor prefsEditor = prefs.edit();
-        prefsEditor.putString(Constants.KEY_NOTE,note);
+        prefsEditor.putInt(Constants.KEY_NOTE_ID,noteID);
         prefsEditor.apply();
         return true;
     }
-    public static String getNote(Context ctx){
+    public static int getNoteID(Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_NOTE, null);
-    }
-    public static boolean saveTitleNote(String titleNote, Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        SharedPreferences.Editor prefsEditor = prefs.edit();
-        prefsEditor.putString(Constants.KEY_TITLE_NOTE,titleNote);
-        prefsEditor.apply();
-        return true;
-    }
-    public static String getTitleNote(Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_TITLE_NOTE, null);
+        return prefs.getInt(Constants.KEY_NOTE_ID, 0);
     }
 
     public static boolean saveDay(String day, Context ctx){
