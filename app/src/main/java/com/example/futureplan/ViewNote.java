@@ -101,6 +101,28 @@ public class ViewNote extends Fragment {
             }
         });
 
+        Button btnDelete = view.findViewById(R.id.btnDelete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notes.remove(note_id);
+
+                String jsonString = gson.toJson(notes,listNotesType);
+
+                try {
+                    File file = new File(getContext().getFilesDir(),"notes.json");
+                    FileWriter fileWriter = null;
+                    fileWriter = new FileWriter(file);
+                    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                    bufferedWriter.write(jsonString);
+                    bufferedWriter.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Navigation.findNavController(view).navigate(R.id.action_viewNote_to_notesList);
+            }
+        });
+
         Button btnSave = view.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -99,7 +99,7 @@ public class EditTimetableTest extends Fragment {
         });
 
         TextView dayEdTxtTests = view.findViewById(R.id.dayEdTxtTests);
-        EditText titleEdTxtTests = view.findViewById(R.id.titleEdTxtTests);
+        TextInputLayout titleEdTxtTests = view.findViewById(R.id.titleEdTxtTests);
 
         dayEdTxtTests.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,7 +148,7 @@ public class EditTimetableTest extends Fragment {
             @Override
             public void onClick(View view) {
                 HomeworkModel homeworkModel;
-                homeworkModel = new HomeworkModel(-1,subject,date,titleEdTxtTests.getText().toString());
+                homeworkModel = new HomeworkModel(-1,subject,date,titleEdTxtTests.getEditText().getText().toString());
                 dataBaseTests.insertData(homeworkModel);
                 Navigation.findNavController(view).navigate(R.id.action_editTimetableTest_to_timetableTest);
             }
