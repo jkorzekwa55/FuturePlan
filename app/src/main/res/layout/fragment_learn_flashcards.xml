@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="50dp"
     tools:context=".LearnFlashcards">
 
@@ -28,7 +28,7 @@
             android:layout_height="200dp"
             android:layout_margin="30dp"
             android:layout_marginTop="200dp"
-            android:background="@color/blue1">
+            android:background="@drawable/flashcard_layout">
 
             <TextView
                 android:id="@+id/backOpis"
@@ -66,7 +66,7 @@
             android:layout_height="200dp"
             android:layout_margin="30dp"
             android:layout_marginTop="200dp"
-            android:background="@color/blue1">
+            android:background="@drawable/flashcard_layout">
 
             <TextView
                 android:id="@+id/frontOpis"
@@ -103,12 +103,59 @@
         android:id="@+id/nextFlash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="28dp"
         android:text="Dalej"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintTop_toBottomOf="@+id/easyFlipView"
+
+        android:textAllCaps="false"
+        style="?attr/materialButtonOutlinedStyle"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/blue2"
+
+
+        />
+
+    <Button
+        android:id="@+id/deleteFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="20dp"
+        android:text="Usuń zestaw"
+        app:layout_constraintEnd_toStartOf="@+id/nextFlash"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/prevFlash"
+        app:layout_constraintTop_toBottomOf="@+id/easyFlipView"
+
+        android:textAllCaps="false"
+        style="?attr/materialButtonOutlinedStyle"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/red2"
+
+        />
+
+    <Button
+        android:id="@+id/prevFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="100dp"
+        android:text="Wróć"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/easyFlipView" />
+        app:layout_constraintTop_toBottomOf="@+id/easyFlipView"
+
+        android:textAllCaps="false"
+        style="?attr/materialButtonOutlinedStyle"
+        app:strokeColor="@color/black"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/blue2"
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
