@@ -4,19 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditPlan"
-    android:paddingTop="0px">
-
+    tools:context=".EditPlan">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtinput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="68dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,47 +29,56 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/timeEdTxt"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/date_text_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:drawableStart="@drawable/time_icon"
-        android:drawablePadding="20px"
-        android:hint="Czas rozpoczecia i zakonczenia"
-        android:paddingLeft="35px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtinput" />
+        app:layout_constraintTop_toBottomOf="@+id/txtinput">
 
-    <EditText
-        android:id="@+id/classEdText"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/time_icon"
+            android:drawablePadding="40px"
+            android:hint="Czas rozpoczecia i zakonczenia"
+            app:layout_constraintTop_toBottomOf="@+id/class_text_input" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/class_text_input"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:drawableStart="@drawable/class_icon"
-        android:drawablePadding="40px"
-        android:hint="Sala"
-        android:paddingLeft="50px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeEdTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/date_text_input">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/class_icon"
+            android:drawablePadding="50px"
+            android:hint="Sala"
+            app:layout_constraintTop_toBottomOf="@+id/classEdText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="294dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="70dp"
         android:text="zapisz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classEdText" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

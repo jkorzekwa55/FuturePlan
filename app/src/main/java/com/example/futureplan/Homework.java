@@ -8,6 +8,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -23,6 +24,7 @@ import java.util.HashMap;
  */
 public class Homework extends Fragment {
     private SimpleAdapter sa;
+    public static String element;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,13 +77,13 @@ public class Homework extends Fragment {
 
         ArrayList<HashMap<String,String>> list = dataBaseHomework.getAdapterList(getContext());
 
+        ListView listHomework = view.findViewById(R.id.listHomework);
+
         sa = new SimpleAdapter(getContext(), list,
                 R.layout.list_timetable,
                 new String[] { "line1","line2","line3" },
                 new int[] {R.id.line_a, R.id.line_b,R.id.line_c});
         ((ListView)view.findViewById(R.id.listHomework)).setAdapter(sa);
-
-
 
         editHomework.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +91,17 @@ public class Homework extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_homework_to_editHomework);
             }
         });
+
+        listHomework.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                System.out.println(list.get(i).get("line1"));
+                element =list.get(i).get("line1");
+                Navigation.findNavController(view).navigate(R.id.action_homework_to_deleteHomework);
+            }
+        });
+
+
 
         return view;
     }

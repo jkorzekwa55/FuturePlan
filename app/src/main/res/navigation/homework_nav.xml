@@ -23,5 +23,17 @@
         <action
             android:id="@+id/action_homework_to_editHomework"
             app:destination="@id/editHomework" />
+        <action
+            android:id="@+id/action_homework_to_deleteHomework"
+            app:destination="@id/deleteHomework" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteHomework"
+        android:name="com.example.futureplan.DeleteHomework"
+        android:label="fragment_delete_homework"
+        tools:layout="@layout/fragment_delete_homework" >
+        <action
+            android:id="@+id/action_deleteHomework_to_homework"
+            app:destination="@id/homework" />
     </fragment>
 </navigation>

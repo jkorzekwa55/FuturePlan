@@ -143,7 +143,7 @@ public class EditHomework extends Fragment {
         };
 
 
-        EditText titleEdTxt = view.findViewById(R.id.titleEdTxt);
+        TextInputLayout titleEdTxt = view.findViewById(R.id.title_text_input);
 
         DataBaseHomework dataBaseHomework = new DataBaseHomework(getContext());
 
@@ -152,7 +152,7 @@ public class EditHomework extends Fragment {
             @Override
             public void onClick(View view) {
                 HomeworkModel homeworkModel;
-                homeworkModel = new HomeworkModel(-1,subject,date,titleEdTxt.getText().toString());
+                homeworkModel = new HomeworkModel(-1,subject,date,titleEdTxt.getEditText().getText().toString());
                 dataBaseHomework.insertData(homeworkModel);
                 Navigation.findNavController(view).navigate(R.id.action_editHomework_to_homework);
             }

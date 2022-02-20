@@ -26,32 +26,7 @@ public class PreferenceUtils {
         prefsEditor.apply();
         return true;
     }
-    public static String getName(Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_NAME, null);
-    }
-    public static boolean saveFirstName(String firstName, Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        SharedPreferences.Editor prefsEditor = prefs.edit();
-        prefsEditor.putString(Constants.KEY_FIRST_NAME,firstName);
-        prefsEditor.apply();
-        return true;
-    }
-    public static String getFirstName(Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_FIRST_NAME, null);
-    }
-    public static boolean saveLastName(String lastName, Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        SharedPreferences.Editor prefsEditor = prefs.edit();
-        prefsEditor.putString(Constants.KEY_LAST_NAME,lastName);
-        prefsEditor.apply();
-        return true;
-    }
-    public static String getLastName(Context ctx){
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_LAST_NAME, null);
-    }
+
     public static boolean saveAvatar(String avatar, Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         SharedPreferences.Editor prefsEditor = prefs.edit();
@@ -63,16 +38,16 @@ public class PreferenceUtils {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         return prefs.getString(Constants.KEY_AVATAR,null);
     }
-    public static boolean saveNumber(String number, Context ctx){
+    public static boolean saveNoteID(int noteID, Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         SharedPreferences.Editor prefsEditor = prefs.edit();
-        prefsEditor.putString(Constants.KEY_NUMBER,number);
+        prefsEditor.putInt(Constants.KEY_NOTE_ID,noteID);
         prefsEditor.apply();
         return true;
     }
-    public static String getNumber(Context ctx){
+    public static int getNoteID(Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
-        return prefs.getString(Constants.KEY_NUMBER, null);
+        return prefs.getInt(Constants.KEY_NOTE_ID, 0);
     }
 
     public static boolean saveDay(String day, Context ctx){
@@ -108,5 +83,16 @@ public class PreferenceUtils {
     public static int getSubjectID(Context ctx){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
         return prefs.getInt(Constants.KEY_ID_SUBJECT_POMOCE,0);
+    }
+    public static boolean saveSubjectIDtext(int subject_id_text, Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        SharedPreferences.Editor prefsEditor = prefs.edit();
+        prefsEditor.putInt(Constants.KEY_ID_SUBJECT_POMOCE_TEXT,subject_id_text);
+        prefsEditor.apply();
+        return true;
+    }
+    public static int getSubjectIDtext(Context ctx){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(ctx);
+        return prefs.getInt(Constants.KEY_ID_SUBJECT_POMOCE_TEXT,0);
     }
 }

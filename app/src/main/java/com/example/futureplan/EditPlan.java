@@ -105,14 +105,14 @@ public class EditPlan extends Fragment {
 
         Button saveButton = view.findViewById(R.id.saveButton);
 
-        EditText timeEdTxt = view.findViewById(R.id.timeEdTxt);
-        EditText classEdText = view.findViewById(R.id.classEdText);
+        TextInputLayout classInputTxt = view.findViewById(R.id.class_text_input);
+        TextInputLayout dateInputTxt = view.findViewById(R.id.date_text_input);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 TimetableModel timetableModel;
-                timetableModel = new TimetableModel(-1, day, subject,timeEdTxt.getText().toString(),classEdText.getText().toString());
+                timetableModel = new TimetableModel(-1, day, subject,dateInputTxt.getEditText().getText().toString(),classInputTxt.getEditText().getText().toString());
                 boolean success = dataBaseTimetable.insertData(timetableModel);
                 Toast.makeText(getContext(), "Success= " + success, Toast.LENGTH_SHORT).show();
                 Navigation.findNavController(view).navigate(R.id.action_editPlan2_to_monday);

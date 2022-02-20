@@ -35,5 +35,14 @@
     <string name="haslo">Haslo</string>
     <string name="Email">Email</string>
     <string name="powHaslo">Powtorz haslo</string>
+    <string name="title">Tytul</string>
+    <string name="save">zapisz</string>
+    <string name="back">powrot</string>
+    <string name="add">dodaj</string>
+    <string name="delete">usun</string>
+    <string name="authors">Autorzy</string>
+    <string name="authors_description">Julia Podolak, Dominik Skąpski, Julia Korzekwa</string>
+    <string name="year_of_creation">Rok powstania : 2021-2022</string>
+    <string name="app_description">Do tworzenia aplikacji użyto Android Studio i języka programowania Java</string>
 
 </resources>
