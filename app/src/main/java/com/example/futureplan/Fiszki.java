@@ -84,6 +84,26 @@ public class Fiszki extends Fragment {
         FCDBHelper DB = new FCDBHelper(getContext());
         Cursor dbCursor = DB.getFlashcardsData();
 
+        //Usuwanie zestawu
+        try
+        {
+            if(getArguments().getString("checkDelete") == "yes")
+            {
+                //System.out.println("Jest Argument!");
+                String name = getArguments().getString("nazwa");
+                Boolean checkDataDelete = DB.deleteData(name);
+                if (checkDataDelete==true)
+                    System.out.println("Usunieto dane");
+                else
+                    System.out.println("Nie Usunieto danych!");
+            }
+        }catch(final Exception e){
+
+        }
+
+
+
+
         fiszkiRecycler.setLayoutManager(
                 new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         );
@@ -140,6 +160,8 @@ public class Fiszki extends Fragment {
                 Navigation.findNavController(view).navigate(R.id.action_menuFiszki_to_learnFlashcards, bundle);
             }
         });
+
+
 
 
         return view;

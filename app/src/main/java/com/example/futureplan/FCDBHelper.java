@@ -54,11 +54,11 @@ public class FCDBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Boolean deleteData (String name){
+    public Boolean deleteData (String nazwa){
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from flashcards where name = ?", new String[] {name});
+        Cursor cursor = DB.rawQuery("Select * from flashcards where nazwa = ?", new String[] {nazwa});
         if(cursor.getCount() > 0){
-            long result = DB.delete("flashcards", "name=?", new String[]{name});
+            long result = DB.delete("flashcards", "nazwa=?", new String[]{nazwa});
             if(result == -1) {
                 return false;
             }else{

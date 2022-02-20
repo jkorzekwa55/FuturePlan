@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,6 +75,8 @@ public class LearnFlashcards extends Fragment {
         Button nextFlash = view.findViewById(R.id.nextFlash);
         FCDBHelper DB = new FCDBHelper(getContext());
         EasyFlipView easyFlipView = view.findViewById(R.id.easyFlipView);
+        Button deleteFlash = view.findViewById(R.id.deleteFlash);
+        Button prevFlash = view.findViewById(R.id.prevFlash);
 
         String nazwa = getArguments().getString("nazwa");
         Cursor cursor = DB.getFlashKit(nazwa);
@@ -99,6 +102,35 @@ public class LearnFlashcards extends Fragment {
                 frontNotatka.setText(cursor.getString(3));
                 backOpis.setText(cursor.getString(4));
                 backNotatka.setText(cursor.getString(5));
+            }
+        });
+
+        prevFlash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(cursor.getPosition() != 0){
+                    cursor.moveToPrevious();
+                    if(easyFlipView.isBackSide()){
+                        easyFlipView.flipTheView();
+                    }
+                }
+
+                frontOpis.setText(cursor.getString(2));
+                frontNotatka.setText(cursor.getString(3));
+                backOpis.setText(cursor.getString(4));
+                backNotatka.setText(cursor.getString(5));
+            }
+        });
+
+        deleteFlash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle2 = new Bundle();
+                bundle2.putString("checkDelete", "yes");
+                bundle2.putString("nazwa", nazwa);
+
+
+                Navigation.findNavController(view).navigate(R.id.menuFiszki, bundle2);
             }
         });
 
